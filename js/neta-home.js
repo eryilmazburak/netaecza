@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
-  var section = document.querySelector(".neta-operations");
+  var shell = document.querySelector(".neta-operations-shell");
 
-  if (!section) {
+  if (!shell) {
     return;
   }
 
   var cards = Array.prototype.slice.call(
-    section.querySelectorAll(".wrapper-block-project.home-2[data-operation]")
+    shell.querySelectorAll(".neta-operations-card[data-operation]")
   );
   var images = Array.prototype.slice.call(
-    section.querySelectorAll(".image-mask[data-operation-image]")
+    shell.querySelectorAll(".neta-operations-media-card[data-operation-image]")
   );
 
   if (!cards.length || !images.length) {
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  section.addEventListener("mouseleave", function () {
+  shell.addEventListener("mouseleave", function () {
     setActive(defaultOperation);
   });
 });
