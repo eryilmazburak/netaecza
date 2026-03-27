@@ -1,10 +1,11 @@
 .neta-colby-heading {
-  padding-top: 0;
+  padding-top: clamp(4.5rem, 8vw, 7rem);
 }
 
 .neta-colby-heading .padding-global {
   position: relative;
   z-index: 2;
+  padding-bottom: clamp(1.75rem, 3.4vw, 2.75rem);
 }
 
 .neta-colby-heading .container-medium {
@@ -14,6 +15,8 @@
 .neta-colby-scope {
   position: relative;
   z-index: 1;
+  margin-bottom: clamp(4rem, 7vw, 6rem);
+  background-color: #f8f7f3 !important;
 }
 
 .neta-colby-scope:not(.neta-colby-ready) :is(
@@ -36,6 +39,7 @@
   .image-portofolio.home-2.v3,
   .image-portofolio.home-2.v4,
   .image-portofolio.home-2.v5,
+  .image-portofolio.home-2.v6,
   .wrapper-image-porto.home-v2.responsive
 ) {
   visibility: hidden !important;
@@ -44,4 +48,83 @@
 .neta-colby-scope .wrapper-block-project.home-2,
 .neta-colby-scope .wrapper-title-cta.home-2 {
   text-decoration: none;
+}
+
+.neta-colby-scope,
+.neta-colby-scope .tracks.home-2.service,
+.neta-colby-scope .tracks.home-2.cta,
+.neta-colby-scope .section-wrapper.home-2,
+.neta-colby-scope .section-wrapper.home-2.cta,
+.neta-colby-scope .frame-wrapper.home-2,
+.neta-colby-scope .wrapper-list-project.home-2,
+.neta-colby-scope .wrapper-cta,
+.neta-colby-scope .block-portfolio-homev2,
+.neta-colby-scope .bg-image-service {
+  background-color: #f8f7f3 !important;
+}
+
+.neta-colby-scope .wrapper-image-portofolio.home-2,
+.neta-colby-scope .wrapper-image-porto.home-v2.responsive {
+  display: none !important;
+}
+
+.neta-colby-scope .bg-service {
+  display: none !important;
+}
+
+.neta-colby-scope .block-list-project.home-2 {
+  background-color: #f8f7f3 !important;
+  min-height: auto;
+}
+
+.neta-colby-scope .big-text.animation-service.home-2 {
+  font-size: clamp(2rem, 4vw, 3.9rem) !important;
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+
+.neta-colby-scope .small-text.animation-service.home-2 {
+  font-size: 0.9rem !important;
+}
+
+.neta-colby-scope .small-text.animation-service.home-2.none {
+  font-size: 0.92rem !important;
+  line-height: 1.35;
+}
+
+.neta-colby-scope .block-text-portofolio .big-text.home-2.text-center {
+  font-size: clamp(2.4rem, 5.6vw, 4.4rem) !important;
+  line-height: 0.94;
+}
+
+.neta-colby-scope .big-text.cta.text-center.v1 {
+  font-size: clamp(3.8rem, 8.2vw, 6.3rem) !important;
+  line-height: 0.92;
+}
+
+.neta-colby-scope .big-text.cta.text-center.v2 {
+  font-size: clamp(1.9rem, 3.6vw, 2.65rem) !important;
+  line-height: 0.98;
+}
+
+@media screen and (max-width: 991px) {
+  .neta-colby-heading {
+    padding-top: clamp(3.5rem, 10vw, 5rem);
+  }
+
+  .neta-colby-scope {
+    margin-bottom: clamp(3rem, 9vw, 4rem);
+  }
+
+  .neta-colby-scope .big-text.animation-service.home-2 {
+    font-size: clamp(1.7rem, 5.4vw, 2.8rem) !important;
+  }
+
+  .neta-colby-scope .big-text.cta.text-center.v1 {
+    font-size: clamp(3rem, 10.5vw, 4.8rem) !important;
+  }
+
+  .neta-colby-scope .big-text.cta.text-center.v2 {
+    font-size: clamp(1.7rem, 5.6vw, 2.2rem) !important;
+  }
 }
