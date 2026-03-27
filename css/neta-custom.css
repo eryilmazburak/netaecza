@@ -64,6 +64,22 @@
   max-width: 52rem;
 }
 
+.section_neta-colby > .padding-section-medium {
+  display: none;
+}
+
+.section_neta-colby .neta-colby-intro .spacer-large {
+  display: none;
+}
+
+.section_neta-colby .neta-colby-scope {
+  margin-top: clamp(1rem, 2vw, 1.75rem);
+}
+
+.section_neta-colby + .section_neta-colby {
+  margin-top: clamp(1.5rem, 3vw, 2.5rem);
+}
+
 .neta-colby-scope {
   width: 100%;
   overflow: hidden;
