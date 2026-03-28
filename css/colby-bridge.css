@@ -15,8 +15,19 @@
 .neta-colby-scope {
   position: relative;
   z-index: 1;
-  margin-bottom: clamp(4rem, 7vw, 6rem);
-  background-color: #f8f7f3 !important;
+  margin-bottom: clamp(3rem, 5vw, 4.25rem);
+}
+
+.neta-colby-heading-cta {
+  padding-top: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.neta-colby-scope-service {
+  margin-bottom: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.neta-colby-scope-cta {
+  margin-bottom: clamp(2.5rem, 4vw, 3.5rem);
 }
 
 .neta-colby-scope:not(.neta-colby-ready) :is(
@@ -53,19 +64,33 @@
 .neta-colby-scope,
 .neta-colby-scope .tracks.home-2.service,
 .neta-colby-scope .tracks.home-2.cta,
-.neta-colby-scope .section-wrapper.home-2,
-.neta-colby-scope .section-wrapper.home-2.cta,
-.neta-colby-scope .frame-wrapper.home-2,
-.neta-colby-scope .wrapper-list-project.home-2,
-.neta-colby-scope .wrapper-cta,
-.neta-colby-scope .block-portfolio-homev2,
-.neta-colby-scope .bg-image-service {
-  background-color: #f8f7f3 !important;
+.neta-colby-scope .wrapper-cta {
+  background-color: transparent !important;
 }
 
 .neta-colby-scope .wrapper-image-portofolio.home-2,
 .neta-colby-scope .wrapper-image-porto.home-v2.responsive {
   display: none !important;
+}
+
+.neta-colby-scope .section-wrapper.home-2,
+.neta-colby-scope .frame-wrapper.home-2,
+.neta-colby-scope .wrapper-list-project.home-2 {
+  background-color: transparent !important;
+}
+
+.neta-colby-scope .wrapper-list-project.home-2 {
+  position: relative;
+  z-index: 2;
+}
+
+.neta-colby-scope .bg-image-service {
+  z-index: 0;
+  background-color: transparent !important;
+}
+
+.neta-colby-scope .bg-video.home-2 {
+  display: block !important;
 }
 
 .neta-colby-scope .bg-service {
@@ -98,12 +123,12 @@
 }
 
 .neta-colby-scope .big-text.cta.text-center.v1 {
-  font-size: clamp(3.8rem, 8.2vw, 6.3rem) !important;
+  font-size: clamp(3.25rem, 7.1vw, 5.4rem) !important;
   line-height: 0.92;
 }
 
 .neta-colby-scope .big-text.cta.text-center.v2 {
-  font-size: clamp(1.9rem, 3.6vw, 2.65rem) !important;
+  font-size: clamp(1.6rem, 3vw, 2.25rem) !important;
   line-height: 0.98;
 }
 
@@ -112,19 +137,64 @@
     padding-top: clamp(3.5rem, 10vw, 5rem);
   }
 
+  .neta-colby-heading-cta {
+    padding-top: clamp(1rem, 4vw, 1.75rem);
+  }
+
   .neta-colby-scope {
-    margin-bottom: clamp(3rem, 9vw, 4rem);
+    margin-bottom: clamp(2.25rem, 7vw, 3rem);
+  }
+
+  .neta-colby-scope-service {
+    margin-bottom: clamp(1rem, 4vw, 1.75rem);
   }
 
   .neta-colby-scope .big-text.animation-service.home-2 {
     font-size: clamp(1.7rem, 5.4vw, 2.8rem) !important;
   }
 
+  .neta-colby-scope .block-list-project.home-2 {
+    gap: 0.8rem;
+    align-items: flex-start;
+  }
+
+  .neta-colby-scope .block-info-project.home-2 {
+    width: 100%;
+  }
+
   .neta-colby-scope .big-text.cta.text-center.v1 {
-    font-size: clamp(3rem, 10.5vw, 4.8rem) !important;
+    font-size: clamp(2.4rem, 8.6vw, 3.9rem) !important;
   }
 
   .neta-colby-scope .big-text.cta.text-center.v2 {
-    font-size: clamp(1.7rem, 5.6vw, 2.2rem) !important;
+    font-size: clamp(1.35rem, 4.6vw, 1.9rem) !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .neta-colby-heading .padding-global {
+    padding-bottom: 1rem;
+  }
+
+  .neta-colby-scope .block-list-project.home-2 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .neta-colby-scope .big-text.animation-service.home-2 {
+    font-size: clamp(1.45rem, 9vw, 2.25rem) !important;
+    line-height: 1;
+  }
+
+  .neta-colby-scope .small-text.animation-service.home-2 {
+    font-size: 0.82rem !important;
+  }
+
+  .neta-colby-scope .small-text.animation-service.home-2.none {
+    font-size: 0.84rem !important;
+  }
+
+  .neta-colby-scope .block-text-portofolio .big-text.home-2.text-center {
+    font-size: clamp(1.9rem, 8vw, 3rem) !important;
   }
 }
