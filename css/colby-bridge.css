@@ -177,44 +177,15 @@
   text-align: left !important;
 }
 
-.neta-colby-scope .big-text.cta.text-center.v1 {
-  font-size: clamp(2.9rem, 6vw, 4.75rem) !important;
-  line-height: 0.92;
+.neta-colby-scope-cta .big-text.cta.text-center.v1 {
+  font-size: calc(var(--typhograpy--big-text-size) * 0.9) !important;
+  line-height: calc(var(--typhograpy--big-text-height) * 0.9) !important;
+}
+
+.neta-colby-scope-cta .big-text.cta.text-center.v2 {
+  font-size: calc(var(--typhograpy--big-text-size) * 0.8) !important;
+  line-height: calc(var(--typhograpy--big-text-height) * 0.8) !important;
   white-space: nowrap;
-}
-
-.neta-colby-scope .big-text.cta.text-center.v2 {
-  font-size: clamp(1.2rem, 2.1vw, 1.6rem) !important;
-  line-height: 0.98;
-  white-space: nowrap;
-}
-
-.neta-colby-scope .block-title-cta {
-  padding-right: clamp(1rem, 3vw, 2rem);
-  padding-left: clamp(1rem, 3vw, 2rem);
-  justify-content: space-between;
-}
-
-.neta-colby-scope .block-link-cta {
-  width: auto;
-  max-width: calc(100vw - 2rem);
-  overflow: visible;
-}
-
-.neta-colby-scope .block-link-cta .wrapper-title-cta.home-2 {
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0.35rem;
-  white-space: nowrap;
-  overflow: visible;
-}
-
-.neta-colby-scope .icon-cta.home-2.tab {
-  display: block !important;
-  margin-bottom: 0 !important;
-  font-size: 1.1em;
-  line-height: 1;
 }
 
 @media screen and (max-width: 991px) {
@@ -258,14 +229,6 @@
     font-size: 0.8rem !important;
   }
 
-  .neta-colby-scope .big-text.cta.text-center.v1 {
-    font-size: clamp(1.95rem, 6.8vw, 3rem) !important;
-  }
-
-  .neta-colby-scope .big-text.cta.text-center.v2 {
-    font-size: clamp(0.95rem, 3.2vw, 1.2rem) !important;
-  }
-
   .neta-colby-scope .wrapper-text-portofolio {
     padding-bottom: clamp(1.5rem, 5vw, 2.5rem) !important;
   }
@@ -306,24 +269,4 @@
     font-size: clamp(1.55rem, 7vw, 2.3rem) !important;
   }
 
-  .neta-colby-scope .block-title-cta {
-    padding-right: 0.8rem;
-    padding-left: 0.8rem;
-  }
-
-  .neta-colby-scope .big-text.cta.text-center.v1 {
-    font-size: clamp(1.6rem, 6vw, 2rem) !important;
-  }
-
-  .neta-colby-scope .big-text.cta.text-center.v2 {
-    font-size: clamp(0.82rem, 3.4vw, 0.98rem) !important;
-  }
-
-  .neta-colby-scope .block-link-cta .wrapper-title-cta.home-2 {
-    gap: 0.2rem;
-  }
-
-  .neta-colby-scope .icon-cta.home-2.tab {
-    font-size: 1rem;
-  }
 }
