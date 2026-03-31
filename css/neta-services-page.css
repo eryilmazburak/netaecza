@@ -1,0 +1,268 @@
+.neta-services-main {
+  background:
+    radial-gradient(circle at top left, rgba(192, 213, 255, 0.18), transparent 34%),
+    radial-gradient(circle at top right, rgba(255, 214, 168, 0.14), transparent 26%),
+    linear-gradient(180deg, #f8f7f3 0%, #f5f3ec 100%);
+}
+
+.neta-services-hero {
+  padding: clamp(5.5rem, 10vw, 8rem) 0 clamp(2.5rem, 6vw, 4rem);
+}
+
+.neta-services-hero__card {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(2rem, 4vw, 3.25rem);
+  border: 1px solid rgba(16, 19, 32, 0.08);
+  border-radius: 2rem;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.72)),
+    rgba(255, 255, 255, 0.7);
+  box-shadow: 0 24px 64px rgba(16, 19, 32, 0.08);
+}
+
+.neta-services-hero__card::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -34% auto;
+  width: clamp(12rem, 28vw, 20rem);
+  aspect-ratio: 1;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(44, 73, 153, 0.18), rgba(44, 73, 153, 0));
+  pointer-events: none;
+}
+
+.neta-services-hero__content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.neta-services-hero__title {
+  max-width: 14ch;
+  margin: 0;
+  font-size: clamp(2.75rem, 6vw, 5.4rem);
+  line-height: 0.94;
+  letter-spacing: -0.05em;
+}
+
+.neta-services-hero__lead {
+  max-width: 62rem;
+  margin: 0;
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  line-height: 1.75;
+  color: rgba(16, 19, 32, 0.76);
+}
+
+.neta-services-points {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+  gap: 1rem;
+}
+
+.neta-services-point {
+  min-height: 100%;
+  padding: 1.2rem 1.15rem;
+  border: 1px solid rgba(16, 19, 32, 0.08);
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+}
+
+.neta-services-point__eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(16, 19, 32, 0.46);
+}
+
+.neta-services-point__title {
+  margin: 0 0 0.55rem;
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+
+.neta-services-point__text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(16, 19, 32, 0.68);
+}
+
+.neta-services-section {
+  padding: 0 0 clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.neta-services-stack {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.neta-service-block {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.4fr);
+  gap: clamp(1.4rem, 3vw, 2rem);
+  align-items: stretch;
+  padding: clamp(1.25rem, 2.4vw, 1.5rem);
+  border: 1px solid rgba(16, 19, 32, 0.08);
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 18px 44px rgba(16, 19, 32, 0.05);
+}
+
+.neta-service-block__media {
+  min-height: 100%;
+}
+
+.neta-service-block__image {
+  width: 100%;
+  height: 100%;
+  min-height: 20rem;
+  object-fit: cover;
+  border-radius: 1.45rem;
+}
+
+.neta-service-block__body {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+  padding: clamp(0.5rem, 1vw, 0.75rem);
+}
+
+.neta-service-block__kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+  padding: 0.55rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(16, 19, 32, 0.06);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(16, 19, 32, 0.56);
+}
+
+.neta-service-block__title {
+  margin: 0;
+  font-size: clamp(1.9rem, 3vw, 2.7rem);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+}
+
+.neta-service-block__lead {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: rgba(16, 19, 32, 0.74);
+}
+
+.neta-service-block__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+}
+
+.neta-service-card {
+  min-height: 100%;
+  padding: 1.15rem 1.1rem;
+  border: 1px solid rgba(16, 19, 32, 0.08);
+  border-radius: 1.3rem;
+  background:
+    linear-gradient(180deg, rgba(248, 247, 243, 0.92), rgba(255, 255, 255, 0.82)),
+    #fff;
+}
+
+.neta-service-card h3 {
+  margin: 0 0 0.65rem;
+  font-size: 1.02rem;
+  line-height: 1.35;
+}
+
+.neta-service-card p {
+  margin: 0;
+  font-size: 0.96rem;
+  line-height: 1.68;
+  color: rgba(16, 19, 32, 0.68);
+}
+
+.neta-service-list-card {
+  padding: 1.25rem;
+  border-radius: 1.4rem;
+  background: linear-gradient(135deg, rgba(16, 19, 32, 0.96), rgba(37, 48, 74, 0.94));
+  color: #f8f7f3;
+}
+
+.neta-service-list-card__title {
+  margin: 0 0 0.9rem;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+}
+
+.neta-service-list {
+  display: grid;
+  gap: 0.8rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.neta-service-list li {
+  position: relative;
+  padding-left: 1.15rem;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: rgba(248, 247, 243, 0.82);
+}
+
+.neta-service-list li::before {
+  content: "";
+  position: absolute;
+  top: 0.65rem;
+  left: 0;
+  width: 0.42rem;
+  height: 0.42rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.neta-service-block__closing {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: rgba(16, 19, 32, 0.62);
+}
+
+@media screen and (max-width: 991px) {
+  .neta-service-block {
+    grid-template-columns: 1fr;
+  }
+
+  .neta-service-block__image {
+    min-height: 15rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .neta-services-hero {
+    padding-top: 4.75rem;
+  }
+
+  .neta-services-hero__card,
+  .neta-service-block {
+    border-radius: 1.5rem;
+  }
+
+  .neta-services-points,
+  .neta-service-block__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .neta-service-block__body {
+    padding: 0;
+  }
+}
