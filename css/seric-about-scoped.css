@@ -1,5 +1,5 @@
 .neta-seric-about {
-  --seric-bg: #fff;
+  --seric-bg: transparent;
   --seric-text: #121212;
   --seric-muted: #6f6f6f;
   --seric-soft: #cfcfcf;
@@ -18,12 +18,12 @@
   --seric-text-sm: 16px;
   --seric-text-sm-line: 150%;
   --seric-text-sm-tracking: -0.5px;
-  background-color: var(--seric-bg);
+  background-color: transparent;
   color: var(--seric-text);
 }
 
 .neta-seric-about .about-us-wrapper {
-  background-color: var(--seric-bg);
+  background-color: transparent;
   padding-top: 152px;
   padding-bottom: 152px;
 }
@@ -49,6 +49,7 @@
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .neta-seric-about .overflow-hidden {
@@ -58,6 +59,7 @@
 
 .neta-seric-about .about-icon {
   width: 65px;
+  display: block;
   transform-origin: 50% 50%;
 }
 
@@ -71,6 +73,7 @@
   max-width: 1088px;
   margin: 20px auto 40px;
   text-align: center;
+  text-wrap: balance;
   text-transform: uppercase;
   font-size: var(--seric-h1);
   line-height: var(--seric-h1-line);
@@ -82,7 +85,9 @@
   color: var(--seric-muted);
   width: 100%;
   max-width: 615px;
+  margin: 0 auto;
   text-align: center;
+  text-wrap: balance;
   font-size: var(--seric-h5);
   line-height: var(--seric-h5-line);
   letter-spacing: var(--seric-h5-tracking);
@@ -96,15 +101,16 @@
 }
 
 .neta-seric-about .primary-button {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   gap: 12px;
   color: var(--seric-text);
   text-decoration: none;
-  font-size: var(--seric-text-sm);
-  line-height: var(--seric-text-sm-line);
-  letter-spacing: var(--seric-text-sm-tracking);
+  font-size: var(--seric-text-md);
+  line-height: var(--seric-text-md-line);
+  letter-spacing: var(--seric-text-md-tracking);
+  white-space: nowrap;
 }
 
 .neta-seric-about .button-arrow-overflow {
@@ -127,6 +133,7 @@
   width: 30px;
   height: 30px;
   overflow: clip;
+  flex: none;
   transition: transform 350ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -141,6 +148,7 @@
   flex-flow: column;
   height: 22px;
   overflow: clip;
+  flex: none;
   transition: transform 350ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -162,7 +170,7 @@
   align-items: center;
   gap: 24px;
   margin-top: 124px;
-  margin-bottom: 0;
+  margin-bottom: 80px;
 }
 
 .neta-seric-about .about-counter-flex {
@@ -219,7 +227,8 @@
   font-size: var(--seric-h5);
   line-height: var(--seric-h5-line);
   letter-spacing: var(--seric-h5-tracking);
-  max-width: 22rem;
+  max-width: 18ch;
+  text-wrap: balance;
 }
 
 .neta-seric-about [data-seric-roll="true"] .number {
@@ -293,6 +302,7 @@
 
   .neta-seric-about .about-counter {
     margin-top: 100px;
+    margin-bottom: 56px;
   }
 
   .neta-seric-about .about-counter-flex {
@@ -336,6 +346,7 @@
     align-items: center;
     gap: 32px;
     margin-top: 60px;
+    margin-bottom: 32px;
   }
 
   .neta-seric-about .about-counter-flex,

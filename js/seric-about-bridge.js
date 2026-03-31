@@ -4,63 +4,104 @@
     return;
   }
 
+  const reveals = Array.from(section.querySelectorAll(".seric-reveal"));
+  const rollers = Array.from(
+    section.querySelectorAll("[data-seric-roll='true']:not([data-seric-static='true'])")
+  );
+  const icon = section.querySelector(".about-icon");
+
   const setDelay = (element) => {
-    const delay = element.getAttribute("data-seric-delay");
-    if (delay) {
-      element.style.setProperty("--seric-delay", `${delay}ms`);
+    const delay = Number(element.getAttribute("data-seric-delay") || 0);
+    element.style.setProperty("--seric-delay", `${delay}ms`);
+  };
+
+  const resetReveals = () => {
+    reveals.forEach((element) => {
+      setDelay(element);
+      element.classList.remove("is-visible");
+      element.style.opacity = "0";
+    });
+  };
+
+  const resetRollers = () => {
+    rollers.forEach((roller) => {
+      roller.classList.remove("is-started");
+      const primary = roller.querySelector(".number._01");
+      const secondary = roller.querySelector(".number._02");
+      if (primary) {
+        primary.style.transform = "";
+      }
+      if (secondary) {
+        secondary.style.transform = "";
+      }
+    });
+  };
+
+  const resetSection = () => {
+    resetReveals();
+    resetRollers();
+    if (icon) {
+      icon.classList.remove("is-spinning");
     }
   };
 
-  const revealElement = (element) => {
-    setDelay(element);
-    element.classList.add("is-visible");
-    if (element.style && element.style.opacity === "0") {
-      element.style.opacity = "1";
-    }
-  };
+  const playSection = () => {
+    resetSection();
+    void section.offsetWidth;
 
-  const startRoll = (element) => {
-    element.classList.add("is-started");
-  };
-
-  const startIconSpin = () => {
-    const icon = section.querySelector(".about-icon");
-    if (icon && !icon.classList.contains("is-spinning")) {
+    if (icon) {
       icon.classList.add("is-spinning");
     }
+
+    reveals.forEach((element) => {
+      setDelay(element);
+      element.classList.add("is-visible");
+      element.style.opacity = "1";
+    });
+
+    rollers.forEach((roller) => {
+      roller.classList.add("is-started");
+    });
   };
 
-  const reveals = Array.from(section.querySelectorAll(".seric-reveal"));
-  const rollers = Array.from(section.querySelectorAll("[data-seric-roll='true']"));
+  resetSection();
 
-  const startSectionAnimations = () => {
-    startIconSpin();
-    reveals.forEach(revealElement);
-    rollers.forEach(startRoll);
-  };
+  if (window.gsap && window.ScrollTrigger) {
+    window.gsap.registerPlugin(window.ScrollTrigger);
 
-  if (!("IntersectionObserver" in window)) {
-    startSectionAnimations();
+    window.ScrollTrigger.create({
+      trigger: section,
+      start: "top 78%",
+      end: "bottom top",
+      onEnter: playSection,
+      onEnterBack: playSection,
+      onLeave: resetSection,
+      onLeaveBack: resetSection,
+    });
+
     return;
   }
 
-  const sectionObserver = new IntersectionObserver(
-    (entries, observer) => {
+  if (!("IntersectionObserver" in window)) {
+    playSection();
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
       entries.forEach((entry) => {
-        if (!entry.isIntersecting) {
+        if (entry.isIntersecting) {
+          playSection();
           return;
         }
-        startSectionAnimations();
-        observer.unobserve(entry.target);
+        resetSection();
       });
     },
     {
-      threshold: 0.1,
-      rootMargin: "0px 0px -10% 0px",
+      threshold: 0.2,
+      rootMargin: "0px 0px -12% 0px",
     }
   );
 
-  reveals.forEach(setDelay);
-
-  sectionObserver.observe(section);
+  observer.observe(section);
 })();
