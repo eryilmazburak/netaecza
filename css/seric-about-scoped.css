@@ -1,0 +1,252 @@
+.neta-seric-about {
+  background-color: #fff;
+}
+
+.neta-seric-about .brands_heading {
+  max-width: none;
+}
+
+.neta-seric-about .about-header-contents {
+  margin-top: 0;
+}
+
+.neta-seric-about .about-header-flex {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.neta-seric-about .overflow-hidden {
+  width: 100%;
+  overflow: hidden;
+}
+
+.neta-seric-about .about-icon {
+  width: 4.0625rem;
+}
+
+.neta-seric-about .about-title {
+  color: #111827;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: -.04em;
+  width: 100%;
+  max-width: 68rem;
+  margin: 1.25rem auto 1.75rem;
+  font-size: clamp(2.5rem, 5.5vw, 5.5rem);
+  line-height: .95;
+  font-weight: 600;
+}
+
+.neta-seric-about .about-para {
+  color: #4b5563;
+  text-align: center;
+  width: 100%;
+  max-width: 38.5rem;
+  font-size: clamp(1rem, 1.8vw, 1.375rem);
+  line-height: 1.35;
+  letter-spacing: -.02em;
+}
+
+.neta-seric-about .about-button-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.neta-seric-about .primary-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .75rem;
+  color: #111827;
+  text-decoration: none;
+  font-size: .95rem;
+  line-height: 1.2;
+  letter-spacing: .08em;
+}
+
+.neta-seric-about .button-arrow-overflow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.625rem;
+  height: 4.625rem;
+  border-radius: 999px;
+  background-color: #111827;
+  color: #fff;
+  transition: transform .25s ease;
+}
+
+.neta-seric-about .primary-button:hover .button-arrow-overflow {
+  transform: translateY(-2px);
+}
+
+.neta-seric-about .button-arrow-block {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 1.875rem;
+  height: 1.875rem;
+  overflow: hidden;
+}
+
+.neta-seric-about .button-arrow {
+  width: 100%;
+  height: 100%;
+}
+
+.neta-seric-about .button-texts {
+  height: 1.25rem;
+  overflow: hidden;
+}
+
+.neta-seric-about .button-text {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.neta-seric-about .brands_list-wrapper {
+  display: block;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+  -webkit-mask: none;
+  mask: none;
+}
+
+.neta-seric-about .about-counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.neta-seric-about .about-counter-flex {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.neta-seric-about .about-counter-flex.center {
+  align-items: center;
+  text-align: center;
+}
+
+.neta-seric-about .about-counter-flex.about-right {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.neta-seric-about .number-wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+  overflow: hidden;
+}
+
+.neta-seric-about .number {
+  display: flex;
+  flex-flow: column;
+  height: 5.75rem;
+  overflow: hidden;
+}
+
+.neta-seric-about .counter-title {
+  color: #111827;
+  font-size: clamp(2.875rem, 5vw, 5.25rem);
+  line-height: 1;
+  letter-spacing: -.05em;
+  font-weight: 600;
+}
+
+.neta-seric-about .counter-title.ash {
+  color: #9ca3af;
+}
+
+.neta-seric-about .about-counter-para {
+  color: #6b7280;
+  max-width: 18rem;
+  font-size: clamp(1rem, 1.4vw, 1.1875rem);
+  line-height: 1.35;
+  letter-spacing: -.02em;
+}
+
+@media screen and (max-width: 991px) {
+  .neta-seric-about .about-title {
+    margin-bottom: 1.25rem;
+  }
+
+  .neta-seric-about .about-counter {
+    gap: 2rem;
+  }
+
+  .neta-seric-about .number {
+    height: 4.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .neta-seric-about .about-icon {
+    width: 3.125rem;
+  }
+
+  .neta-seric-about .about-title {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: clamp(2.125rem, 10vw, 3.5rem);
+  }
+
+  .neta-seric-about .about-para {
+    font-size: 1rem;
+  }
+
+  .neta-seric-about .about-button-block {
+    margin-top: 1.5rem;
+  }
+
+  .neta-seric-about .button-arrow-overflow {
+    width: 3.75rem;
+    height: 3.75rem;
+  }
+
+  .neta-seric-about .button-text {
+    font-size: .875rem;
+  }
+
+  .neta-seric-about .about-counter {
+    flex-flow: column;
+    gap: 1.75rem;
+  }
+
+  .neta-seric-about .about-counter-flex,
+  .neta-seric-about .about-counter-flex.center,
+  .neta-seric-about .about-counter-flex.about-right {
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+  }
+
+  .neta-seric-about .number {
+    height: 3.125rem;
+  }
+
+  .neta-seric-about .counter-title {
+    font-size: clamp(2.25rem, 10vw, 3.25rem);
+  }
+
+  .neta-seric-about .about-counter-para {
+    max-width: none;
+    font-size: 1rem;
+  }
+}
