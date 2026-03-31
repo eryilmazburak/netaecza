@@ -108,12 +108,14 @@
 .neta-seric-about .about-button-block .button {
   display: inline-block;
   border-radius: 999px;
+  background-color: #253771;
 }
 
 .home-header_button .button_inner,
 .neta-seric-about .about-button-block .button_inner {
   padding: 1.18rem 1.85rem;
   border-radius: inherit;
+  box-shadow: inset 0 0 7px #ffffff2e;
 }
 
 .home-header_button .button_gradient,
@@ -269,6 +271,7 @@
   letter-spacing: var(--seric-h5-tracking);
   max-width: 18ch;
   text-wrap: balance;
+  margin: 0;
 }
 
 .neta-seric-about [data-seric-roll="true"] .number {
@@ -382,10 +385,10 @@
   }
 
   .neta-seric-about .about-counter {
-    flex-flow: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 32px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    align-items: start;
     margin-top: 60px;
     margin-bottom: 32px;
   }
@@ -395,14 +398,17 @@
   .neta-seric-about .about-counter-flex.about-right {
     align-items: center;
     text-align: center;
-    width: 100%;
+    width: auto;
+    gap: 14px;
   }
 
   .neta-seric-about .about-counter-para {
-    max-width: 18rem;
+    max-width: 10ch;
     font-size: var(--seric-text-sm);
     line-height: var(--seric-text-sm-line);
     letter-spacing: var(--seric-text-sm-tracking);
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .neta-seric-about .button-arrow-overflow {
@@ -434,6 +440,10 @@
   }
 
   .neta-seric-about .about-counter {
-    gap: 30px;
+    gap: 14px;
+  }
+
+  .neta-seric-about .about-counter-para {
+    max-width: 9ch;
   }
 }

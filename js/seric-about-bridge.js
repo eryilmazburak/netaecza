@@ -8,6 +8,15 @@
   const rollers = Array.from(section.querySelectorAll("[data-seric-roll='true']"));
   const icon = section.querySelector(".about-icon");
   let replayTimeout = null;
+  let isActive = false;
+
+  const clearReplayTimeout = () => {
+    if (!replayTimeout) {
+      return;
+    }
+    window.clearTimeout(replayTimeout);
+    replayTimeout = null;
+  };
 
   const setDelay = (element) => {
     const delay = Number(element.getAttribute("data-seric-delay") || 0);
@@ -36,11 +45,7 @@
     });
   };
 
-  const resetSection = () => {
-    if (replayTimeout) {
-      window.clearTimeout(replayTimeout);
-      replayTimeout = null;
-    }
+  const applyReset = () => {
     resetReveals();
     resetRollers();
     if (icon) {
@@ -48,10 +53,24 @@
     }
   };
 
+  const resetSection = () => {
+    if (!isActive && !replayTimeout) {
+      return;
+    }
+    isActive = false;
+    clearReplayTimeout();
+    applyReset();
+  };
+
   const playSection = () => {
-    resetSection();
+    if (isActive || replayTimeout) {
+      return;
+    }
+    applyReset();
 
     replayTimeout = window.setTimeout(() => {
+      replayTimeout = null;
+      isActive = true;
       if (icon) {
         icon.classList.add("is-spinning");
       }
@@ -68,15 +87,15 @@
     }, 60);
   };
 
-  resetSection();
+  applyReset();
 
   if (window.gsap && window.ScrollTrigger) {
     window.gsap.registerPlugin(window.ScrollTrigger);
 
     window.ScrollTrigger.create({
       trigger: section,
-      start: "top 78%",
-      end: "bottom top",
+      start: "top 80%",
+      end: "bottom -10%",
       onEnter: playSection,
       onEnterBack: playSection,
       onLeave: resetSection,
