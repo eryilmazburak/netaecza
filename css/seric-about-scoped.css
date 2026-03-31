@@ -1,9 +1,43 @@
 .neta-seric-about {
-  background-color: #fff;
+  --seric-bg: #fff;
+  --seric-text: #121212;
+  --seric-muted: #6f6f6f;
+  --seric-soft: #cfcfcf;
+  --seric-h1: 84px;
+  --seric-h1-line: 120%;
+  --seric-h1-tracking: 0.72px;
+  --seric-h3: 48px;
+  --seric-h3-line: 133%;
+  --seric-h3-tracking: -0.5px;
+  --seric-h5: 24px;
+  --seric-h5-line: 140%;
+  --seric-h5-tracking: -0.5px;
+  --seric-text-md: 18px;
+  --seric-text-md-line: 150%;
+  --seric-text-md-tracking: -0.5px;
+  --seric-text-sm: 16px;
+  --seric-text-sm-line: 150%;
+  --seric-text-sm-tracking: -0.5px;
+  background-color: var(--seric-bg);
+  color: var(--seric-text);
 }
 
-.neta-seric-about .brands_heading {
-  max-width: none;
+.neta-seric-about .about-us-wrapper {
+  background-color: var(--seric-bg);
+  padding-top: 152px;
+  padding-bottom: 152px;
+}
+
+.neta-seric-about .container {
+  width: min(100%, 1328px);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.neta-seric-about .brands_head {
+  margin-bottom: 55px;
 }
 
 .neta-seric-about .about-header-contents {
@@ -18,70 +52,71 @@
 }
 
 .neta-seric-about .overflow-hidden {
+  overflow: clip;
   width: 100%;
-  overflow: hidden;
 }
 
 .neta-seric-about .about-icon {
-  width: 4.0625rem;
+  width: 65px;
+  transform-origin: 50% 50%;
+}
+
+.neta-seric-about .about-icon.is-spinning {
+  animation: neta-seric-spin 10s linear infinite;
 }
 
 .neta-seric-about .about-title {
-  color: #111827;
+  color: var(--seric-text);
+  width: 100%;
+  max-width: 1088px;
+  margin: 20px auto 40px;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: -.04em;
-  width: 100%;
-  max-width: 68rem;
-  margin: 1.25rem auto 1.75rem;
-  font-size: clamp(2.5rem, 5.5vw, 5.5rem);
-  line-height: .95;
+  font-size: var(--seric-h1);
+  line-height: var(--seric-h1-line);
   font-weight: 600;
+  letter-spacing: var(--seric-h1-tracking);
 }
 
 .neta-seric-about .about-para {
-  color: #4b5563;
-  text-align: center;
+  color: var(--seric-muted);
   width: 100%;
-  max-width: 38.5rem;
-  font-size: clamp(1rem, 1.8vw, 1.375rem);
-  line-height: 1.35;
-  letter-spacing: -.02em;
+  max-width: 615px;
+  text-align: center;
+  font-size: var(--seric-h5);
+  line-height: var(--seric-h5-line);
+  letter-spacing: var(--seric-h5-tracking);
 }
 
 .neta-seric-about .about-button-block {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 32px;
 }
 
 .neta-seric-about .primary-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: .75rem;
-  color: #111827;
+  gap: 12px;
+  color: var(--seric-text);
   text-decoration: none;
-  font-size: .95rem;
-  line-height: 1.2;
-  letter-spacing: .08em;
+  font-size: var(--seric-text-sm);
+  line-height: var(--seric-text-sm-line);
+  letter-spacing: var(--seric-text-sm-tracking);
 }
 
 .neta-seric-about .button-arrow-overflow {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 4.625rem;
-  height: 4.625rem;
-  border-radius: 999px;
-  background-color: #111827;
+  width: 74px;
+  height: 74px;
+  border-radius: 100%;
+  background-color: var(--seric-text);
   color: #fff;
-  transition: transform .25s ease;
-}
-
-.neta-seric-about .primary-button:hover .button-arrow-overflow {
-  transform: translateY(-2px);
+  flex: none;
 }
 
 .neta-seric-about .button-arrow-block {
@@ -89,51 +124,55 @@
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  width: 1.875rem;
-  height: 1.875rem;
-  overflow: hidden;
+  width: 30px;
+  height: 30px;
+  overflow: clip;
+  transition: transform 350ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .neta-seric-about .button-arrow {
-  width: 100%;
-  height: 100%;
+  width: 30px;
+  height: 30px;
+  flex: none;
 }
 
 .neta-seric-about .button-texts {
-  height: 1.25rem;
-  overflow: hidden;
+  display: flex;
+  flex-flow: column;
+  height: 22px;
+  overflow: clip;
+  transition: transform 350ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .neta-seric-about .button-text {
-  font-weight: 600;
+  display: flex;
+  align-items: center;
+  height: 22px;
   white-space: nowrap;
 }
 
-.neta-seric-about .brands_list-wrapper {
-  display: block;
-  max-width: none;
-  margin-left: 0;
-  margin-right: 0;
-  -webkit-mask: none;
-  mask: none;
+.neta-seric-about .primary-button:hover .button-arrow-block,
+.neta-seric-about .primary-button:hover .button-texts {
+  transform: translateY(-100%);
 }
 
 .neta-seric-about .about-counter {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  gap: 2.5rem;
-  margin-top: 0;
+  align-items: center;
+  gap: 24px;
+  margin-top: 124px;
   margin-bottom: 0;
 }
 
 .neta-seric-about .about-counter-flex {
   display: flex;
+  flex: 1 1 0;
   flex-flow: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 1rem;
-  flex: 1;
+  gap: 34px;
+  overflow: clip;
   min-width: 0;
 }
 
@@ -152,101 +191,196 @@
   justify-content: flex-start;
   align-items: center;
   gap: 0;
-  overflow: hidden;
+  overflow: clip;
 }
 
 .neta-seric-about .number {
   display: flex;
   flex-flow: column;
-  height: 5.75rem;
-  overflow: hidden;
+  height: 100.797px;
+  will-change: transform;
 }
 
 .neta-seric-about .counter-title {
-  color: #111827;
-  font-size: clamp(2.875rem, 5vw, 5.25rem);
-  line-height: 1;
-  letter-spacing: -.05em;
+  color: var(--seric-text);
+  font-size: var(--seric-h1);
+  line-height: var(--seric-h1-line);
   font-weight: 600;
+  letter-spacing: var(--seric-h1-tracking);
+  white-space: nowrap;
 }
 
 .neta-seric-about .counter-title.ash {
-  color: #9ca3af;
+  color: var(--seric-soft);
 }
 
 .neta-seric-about .about-counter-para {
-  color: #6b7280;
-  max-width: 18rem;
-  font-size: clamp(1rem, 1.4vw, 1.1875rem);
-  line-height: 1.35;
-  letter-spacing: -.02em;
+  color: var(--seric-muted);
+  font-size: var(--seric-h5);
+  line-height: var(--seric-h5-line);
+  letter-spacing: var(--seric-h5-tracking);
+  max-width: 22rem;
+}
+
+.neta-seric-about [data-seric-roll="true"] .number {
+  transition: transform 2000ms cubic-bezier(0.784, 0.325, 0.222, 0.98);
+}
+
+.neta-seric-about [data-seric-roll="true"] .number._01 {
+  transform: translate3d(0, -1000%, 0);
+}
+
+.neta-seric-about [data-seric-roll="true"] .number._02 {
+  transform: translate3d(0, 0, 0);
+}
+
+.neta-seric-about [data-seric-roll="true"].is-started .number._01 {
+  transform: translate3d(0, 0, 0);
+}
+
+.neta-seric-about [data-seric-roll="true"].is-started .number._02 {
+  transform: translate3d(0, -1000%, 0);
+}
+
+.neta-seric-about .seric-reveal {
+  opacity: 0;
+  transform: translate3d(0, 100px, 0);
+  transition-property: opacity, transform;
+  transition-duration: 1000ms;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition-delay: var(--seric-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.neta-seric-about .seric-reveal.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.neta-seric-about .number-wrap.is-static {
+  overflow: visible;
+}
+
+@keyframes neta-seric-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @media screen and (max-width: 991px) {
+  .neta-seric-about {
+    --seric-h1: 54px;
+    --seric-h3: 40px;
+    --seric-h5: 24px;
+    --seric-text-md: 16px;
+  }
+
   .neta-seric-about .about-title {
-    margin-bottom: 1.25rem;
+    margin-bottom: 30px;
+  }
+
+  .neta-seric-about .about-para {
+    max-width: 532px;
+  }
+
+  .neta-seric-about .about-button-block {
+    margin-top: 24px;
   }
 
   .neta-seric-about .about-counter {
-    gap: 2rem;
+    margin-top: 100px;
+  }
+
+  .neta-seric-about .about-counter-flex {
+    gap: 16px;
   }
 
   .neta-seric-about .number {
-    height: 4.5rem;
+    height: 64.7969px;
   }
 }
 
 @media screen and (max-width: 767px) {
+  .neta-seric-about {
+    --seric-h1: 36px;
+    --seric-h3: 28px;
+    --seric-h5: 21px;
+    --seric-text-md: 16px;
+  }
+
+  .neta-seric-about .about-us-wrapper {
+    padding-top: 104px;
+    padding-bottom: 104px;
+  }
+
+  .neta-seric-about .brands_head {
+    margin-bottom: 40px;
+  }
+
   .neta-seric-about .about-icon {
-    width: 3.125rem;
+    width: 56px;
   }
 
   .neta-seric-about .about-title {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-size: clamp(2.125rem, 10vw, 3.5rem);
-  }
-
-  .neta-seric-about .about-para {
-    font-size: 1rem;
-  }
-
-  .neta-seric-about .about-button-block {
-    margin-top: 1.5rem;
-  }
-
-  .neta-seric-about .button-arrow-overflow {
-    width: 3.75rem;
-    height: 3.75rem;
-  }
-
-  .neta-seric-about .button-text {
-    font-size: .875rem;
+    margin-top: 16px;
+    margin-bottom: 24px;
   }
 
   .neta-seric-about .about-counter {
-    flex-flow: column;
-    gap: 1.75rem;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    margin-top: 60px;
   }
 
   .neta-seric-about .about-counter-flex,
   .neta-seric-about .about-counter-flex.center,
   .neta-seric-about .about-counter-flex.about-right {
-    align-items: flex-start;
-    text-align: left;
+    align-items: center;
+    text-align: center;
     width: 100%;
   }
 
   .neta-seric-about .number {
-    height: 3.125rem;
-  }
-
-  .neta-seric-about .counter-title {
-    font-size: clamp(2.25rem, 10vw, 3.25rem);
+    height: 43.2031px;
   }
 
   .neta-seric-about .about-counter-para {
-    max-width: none;
-    font-size: 1rem;
+    max-width: 18rem;
+    font-size: var(--seric-text-sm);
+    line-height: var(--seric-text-sm-line);
+    letter-spacing: var(--seric-text-sm-tracking);
+  }
+
+  .neta-seric-about .button-arrow-overflow {
+    width: 50px;
+    height: 50px;
+  }
+
+  .neta-seric-about .button-arrow-block,
+  .neta-seric-about .button-arrow {
+    width: 25px;
+    height: 25px;
+  }
+
+  .neta-seric-about .button-texts,
+  .neta-seric-about .button-text {
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .neta-seric-about .about-us-wrapper {
+    padding-top: 88px;
+    padding-bottom: 88px;
+  }
+
+  .neta-seric-about .about-counter {
+    gap: 30px;
   }
 }
