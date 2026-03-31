@@ -101,7 +101,34 @@
   justify-content: center;
   align-items: center;
   margin-top: 32px;
-  min-height: 74px;
+  min-height: 68px;
+}
+
+.home-header_button .button,
+.neta-seric-about .about-button-block .button {
+  display: inline-block;
+  border-radius: 999px;
+}
+
+.home-header_button .button_inner,
+.neta-seric-about .about-button-block .button_inner {
+  padding: 1.18rem 1.85rem;
+  border-radius: inherit;
+}
+
+.home-header_button .button_gradient,
+.home-header_button .button_gradient-glow,
+.neta-seric-about .about-button-block .button_gradient,
+.neta-seric-about .about-button-block .button_gradient-glow {
+  border-radius: inherit;
+}
+
+.neta-seric-about .about-button-block .button {
+  color: #fff;
+}
+
+.neta-seric-about .about-button-block .button_text {
+  white-space: nowrap;
 }
 
 .neta-seric-about .primary-button {
@@ -381,6 +408,11 @@
   .neta-seric-about .button-arrow-overflow {
     width: 50px;
     height: 50px;
+  }
+
+  .home-header_button .button_inner,
+  .neta-seric-about .about-button-block .button_inner {
+    padding: .98rem 1.55rem;
   }
 
   .neta-seric-about .button-arrow-block,
