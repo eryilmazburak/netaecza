@@ -7,7 +7,10 @@
 }
 
 .section_home-about .home-about_img-text {
+  text-align: center;
+  text-wrap: balance;
   white-space: nowrap;
+  padding-inline: 1rem;
 }
 
 .footer_brand {
@@ -25,6 +28,15 @@
 
   .section_home-about .home-about_img.is-mobile {
     display: block;
+  }
+
+  .section_home-about .home-about_img-text {
+    white-space: normal;
+    width: min(80vw, 18rem);
+    max-width: 18rem;
+    font-size: clamp(1.8rem, 8.2vw, 2.7rem);
+    line-height: 0.98;
+    padding-inline: 0;
   }
 
   .footer_brand {
