@@ -68,19 +68,18 @@
 }
 
 .neta-colby-scope-cta .block-link-cta {
-  width: 100%;
-  min-height: clamp(4.5rem, 7vw, 6.25rem);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: auto;
+  min-height: 0;
+  height: auto;
   overflow: hidden;
 }
 
 .neta-colby-scope-cta .block-link-cta > .wrapper-title-cta.home-2 {
   width: auto !important;
-  min-height: 1.08em;
+  min-height: 0;
   margin-top: 0 !important;
-  padding-bottom: 0.14em;
+  padding-top: 0.14em;
+  padding-bottom: 0.18em;
   display: inline-flex !important;
   flex-flow: row !important;
   justify-content: center !important;
@@ -89,9 +88,10 @@
 }
 
 .neta-colby-scope-cta .big-text.cta.text-center.v2 {
-  line-height: 1.04;
+  line-height: 1.06;
   white-space: nowrap;
-  padding-bottom: 0.08em;
+  padding-top: 0.02em;
+  padding-bottom: 0.06em;
 }
 
 .neta-colby-scope-cta .icon-cta.home-2.tab {
@@ -406,16 +406,18 @@
   }
 
   .neta-colby-scope-cta .block-link-cta {
-    min-height: 3.9rem;
+    min-height: 0;
   }
 
   .neta-colby-scope-cta .block-link-cta > .wrapper-title-cta.home-2 {
     gap: 0.28rem;
+    padding-top: 0.16em;
+    padding-bottom: 0.2em;
   }
 
   .neta-colby-scope-cta .big-text.cta.text-center.v2 {
     font-size: clamp(2rem, 10.5vw, 2.75rem) !important;
-    line-height: 1.02;
+    line-height: 1.08;
   }
 
 }
