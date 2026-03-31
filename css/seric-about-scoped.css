@@ -18,6 +18,9 @@
   --seric-text-sm: 16px;
   --seric-text-sm-line: 150%;
   --seric-text-sm-tracking: -0.5px;
+  --seric-about-title-size: 76px;
+  --seric-about-title-line: 112%;
+  --seric-counter-height: 100.797px;
   background-color: transparent;
   color: var(--seric-text);
 }
@@ -70,15 +73,15 @@
 .neta-seric-about .about-title {
   color: var(--seric-text);
   width: 100%;
-  max-width: 1088px;
-  margin: 20px auto 40px;
+  max-width: 1020px;
+  margin: 20px auto 34px;
   text-align: center;
   text-wrap: balance;
   text-transform: uppercase;
-  font-size: var(--seric-h1);
-  line-height: var(--seric-h1-line);
+  font-size: var(--seric-about-title-size);
+  line-height: var(--seric-about-title-line);
   font-weight: 600;
-  letter-spacing: var(--seric-h1-tracking);
+  letter-spacing: 0.4px;
 }
 
 .neta-seric-about .about-para {
@@ -98,13 +101,14 @@
   justify-content: center;
   align-items: center;
   margin-top: 32px;
+  min-height: 74px;
 }
 
 .neta-seric-about .primary-button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   color: var(--seric-text);
   text-decoration: none;
   font-size: var(--seric-text-md);
@@ -167,8 +171,8 @@
 .neta-seric-about .about-counter {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  gap: 24px;
+  align-items: flex-start;
+  gap: 28px;
   margin-top: 124px;
   margin-bottom: 80px;
 }
@@ -199,13 +203,22 @@
   justify-content: flex-start;
   align-items: center;
   gap: 0;
+  min-height: var(--seric-counter-height);
   overflow: clip;
+}
+
+.neta-seric-about .about-counter-flex.center .number-wrap {
+  justify-content: center;
+}
+
+.neta-seric-about .about-counter-flex.about-right .number-wrap {
+  justify-content: flex-end;
 }
 
 .neta-seric-about .number {
   display: flex;
   flex-flow: column;
-  height: 100.797px;
+  height: var(--seric-counter-height);
   will-change: transform;
 }
 
@@ -286,6 +299,8 @@
     --seric-h3: 40px;
     --seric-h5: 24px;
     --seric-text-md: 16px;
+    --seric-about-title-size: 60px;
+    --seric-counter-height: 64.7969px;
   }
 
   .neta-seric-about .about-title {
@@ -308,10 +323,6 @@
   .neta-seric-about .about-counter-flex {
     gap: 16px;
   }
-
-  .neta-seric-about .number {
-    height: 64.7969px;
-  }
 }
 
 @media screen and (max-width: 767px) {
@@ -320,6 +331,9 @@
     --seric-h3: 28px;
     --seric-h5: 21px;
     --seric-text-md: 16px;
+    --seric-about-title-size: 32px;
+    --seric-about-title-line: 116%;
+    --seric-counter-height: 43.2031px;
   }
 
   .neta-seric-about .about-us-wrapper {
@@ -355,10 +369,6 @@
     align-items: center;
     text-align: center;
     width: 100%;
-  }
-
-  .neta-seric-about .number {
-    height: 43.2031px;
   }
 
   .neta-seric-about .about-counter-para {

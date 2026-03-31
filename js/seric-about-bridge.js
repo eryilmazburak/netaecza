@@ -5,10 +5,9 @@
   }
 
   const reveals = Array.from(section.querySelectorAll(".seric-reveal"));
-  const rollers = Array.from(
-    section.querySelectorAll("[data-seric-roll='true']:not([data-seric-static='true'])")
-  );
+  const rollers = Array.from(section.querySelectorAll("[data-seric-roll='true']"));
   const icon = section.querySelector(".about-icon");
+  let replayTimeout = null;
 
   const setDelay = (element) => {
     const delay = Number(element.getAttribute("data-seric-delay") || 0);
@@ -38,6 +37,10 @@
   };
 
   const resetSection = () => {
+    if (replayTimeout) {
+      window.clearTimeout(replayTimeout);
+      replayTimeout = null;
+    }
     resetReveals();
     resetRollers();
     if (icon) {
@@ -47,21 +50,22 @@
 
   const playSection = () => {
     resetSection();
-    void section.offsetWidth;
 
-    if (icon) {
-      icon.classList.add("is-spinning");
-    }
+    replayTimeout = window.setTimeout(() => {
+      if (icon) {
+        icon.classList.add("is-spinning");
+      }
 
-    reveals.forEach((element) => {
-      setDelay(element);
-      element.classList.add("is-visible");
-      element.style.opacity = "1";
-    });
+      reveals.forEach((element) => {
+        setDelay(element);
+        element.classList.add("is-visible");
+        element.style.opacity = "1";
+      });
 
-    rollers.forEach((roller) => {
-      roller.classList.add("is-started");
-    });
+      rollers.forEach((roller) => {
+        roller.classList.add("is-started");
+      });
+    }, 60);
   };
 
   resetSection();
