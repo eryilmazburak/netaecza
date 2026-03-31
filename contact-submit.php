@@ -38,6 +38,45 @@ function hostDomain(): string
     return $host;
 }
 
+function configuredFromEmail(): string
+{
+    $envValue = trim((string) getenv('CONTACT_FORM_FROM_EMAIL'));
+
+    if ($envValue !== '' && filter_var($envValue, FILTER_VALIDATE_EMAIL)) {
+        return $envValue;
+    }
+
+    return 'no-reply@' . hostDomain();
+}
+
+function sendContactMail(string $recipient, string $subject, string $body, array $headers, string $fromEmail): bool
+{
+    $headerString = implode("\r\n", $headers);
+    $attempts = [
+        ['extra' => '-f ' . $fromEmail, 'label' => 'mail_with_envelope'],
+        ['extra' => null, 'label' => 'mail_without_envelope'],
+    ];
+
+    foreach ($attempts as $attempt) {
+        $extra = $attempt['extra'];
+        $label = $attempt['label'];
+
+        $sent = $extra === null
+            ? @mail($recipient, $subject, $body, $headerString)
+            : @mail($recipient, $subject, $body, $headerString, $extra);
+
+        if ($sent) {
+            return true;
+        }
+
+        $lastError = error_get_last();
+        $errorMessage = is_array($lastError) ? ($lastError['message'] ?? 'unknown error') : 'unknown error';
+        error_log('Contact form ' . $label . ' failed: ' . $errorMessage);
+    }
+
+    return false;
+}
+
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     redirectToContact('error', 'Gecersiz istek.');
 }
@@ -66,7 +105,7 @@ if (
 
 $recipient = 'iamburakeryilmaz@gmail.com';
 $subject = 'Neta Ecza Iletisim Formu';
-$fromEmail = 'no-reply@' . hostDomain();
+$fromEmail = configuredFromEmail();
 $body = implode("\n", [
     'Yeni iletisim formu mesaji',
     '',
@@ -87,17 +126,11 @@ $headers = [
     'X-Mailer: PHP/' . phpversion(),
 ];
 
-$mailSent = @mail(
-    $recipient,
-    $subject,
-    $body,
-    implode("\r\n", $headers),
-    '-f ' . $fromEmail
-);
+$mailSent = sendContactMail($recipient, $subject, $body, $headers, $fromEmail);
 
 if (!$mailSent) {
-    error_log('Contact form mail failed for ' . $email);
-    redirectToContact('error', 'Mesaj gonderilirken bir sorun olustu.');
+    error_log('Contact form mail failed for ' . $email . ' via host ' . hostDomain() . ' using from ' . $fromEmail);
+    redirectToContact('error', 'Sunucu e-posta gonderimini kabul etmedi.');
 }
 
 redirectToContact('success');
