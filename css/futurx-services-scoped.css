@@ -1,9 +1,9 @@
 .neta-futurx-services {
   --color: #303a75;
   --rgb: 40, 87, 255;
-  margin-top: -164px;
+  margin-top: 0;
   margin-bottom: 60px;
-  padding-top: 300px;
+  padding-top: 0;
   position: relative;
   z-index: 1;
   overflow: clip;
@@ -29,25 +29,9 @@
   opacity: 0.8;
 }
 
-.neta-futurx-services .page-padding {
-  padding-left: 32px;
-  padding-right: 32px;
-}
-
-.neta-futurx-services .container {
-  width: 100%;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.neta-futurx-services .container.page-padding {
-  max-width: none;
-  margin-bottom: 0;
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 0;
-  padding-right: 0;
+.neta-futurx-services .work-list_component {
+  position: relative;
+  z-index: 1;
 }
 
 .neta-futurx-services .light-bar {
@@ -78,45 +62,17 @@
   transform: translateY(-200px) rotate(180deg) scale(2) translateZ(0);
 }
 
-.neta-futurx-services .feature-section-header {
-  text-align: center;
-  margin-top: -128px;
-  margin-bottom: -128px;
-  padding-top: 128px;
-  padding-bottom: 128px;
+.neta-futurx-services .work-list_head {
   position: relative;
-}
-
-.neta-futurx-services .feature-heading {
-  letter-spacing: -0.04em;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  background-image: radial-gradient(
-    40% 70% at 50% 100%,
-    rgba(37, 55, 113, 0.45),
-    rgb(17, 17, 17)
-  );
-  margin-bottom: 16px;
-  padding: 0.13em;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  font-size: 80px;
-  font-weight: 400;
-  line-height: 0.9;
-  transition: transform 0.96s cubic-bezier(0.3, 1.17, 0.55, 0.99);
-}
-
-.neta-futurx-services.visible .feature-heading {
-  transform: translateY(-40%);
+  z-index: 1;
 }
 
 .neta-futurx-services .feature-subheading {
   color: #111111;
   text-align: center;
   letter-spacing: -0.04em;
-  max-width: 100vw;
-  margin: 64px 0 20px;
+  max-width: 72rem;
+  margin: 48px auto 0;
   padding-left: 5%;
   padding-right: 5%;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -185,7 +141,8 @@
   align-items: center;
   display: flex;
   position: relative;
-  top: 10rem;
+  margin-top: 80px;
+  top: 0;
 }
 
 .neta-futurx-services .card-left {
@@ -267,10 +224,6 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .neta-futurx-services .container.page-padding {
-    max-width: none;
-  }
-
   .neta-futurx-services .stacking-card.is--first,
   .neta-futurx-services .stacking-card.is--second,
   .neta-futurx-services .stacking-card.is--third,
@@ -290,33 +243,16 @@
 
 @media screen and (max-width: 767px) {
   .neta-futurx-services {
-    padding-top: 300px;
-  }
-
-  .neta-futurx-services .page-padding {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-
-  .neta-futurx-services .feature-heading {
-    font-size: 52px;
+    padding-top: 0;
   }
 
   .neta-futurx-services .feature-subheading {
     font-size: 24px;
+    margin-top: 36px;
   }
 }
 
 @media screen and (max-width: 479px) {
-  .neta-futurx-services .container.page-padding {
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0;
-    padding-bottom: 0;
-    padding-left: 5%;
-    padding-right: 5%;
-  }
-
   .neta-futurx-services .text-size-regular.text-color-primary {
     font-size: 0.8rem;
     line-height: 1.2em;
@@ -330,7 +266,7 @@
   }
 
   .neta-futurx-services .hero_card-wrapper {
-    margin-top: -12%;
+    margin-top: 48px;
   }
 
   .neta-futurx-services .card-left {
