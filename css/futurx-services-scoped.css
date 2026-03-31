@@ -1,8 +1,8 @@
 .neta-futurx-services {
   --rgb: 37, 55, 113;
-  --glass-border: rgba(37, 55, 113, 0.18);
-  --glass-shadow: 0 30px 90px rgba(13, 18, 34, 0.14);
-  --glass-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.52);
+  --glass-border: rgba(78, 106, 188, 0.18);
+  --glass-shadow: 0 20px 52px rgba(9, 14, 28, 0.1);
+  --glass-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.26);
   margin-top: 0;
   margin-bottom: 96px;
   padding-top: 0;
@@ -10,39 +10,6 @@
   z-index: 1;
   overflow: visible;
   isolation: isolate;
-}
-
-.neta-futurx-services::after {
-  content: "";
-  position: absolute;
-  top: 14rem;
-  left: 50%;
-  width: min(92vw, 1160px);
-  height: min(72vh, 880px);
-  pointer-events: none;
-  user-select: none;
-  opacity: 0.38;
-  background: radial-gradient(
-      circle at 50% 20%,
-      rgba(var(--rgb), 0.16),
-      rgba(255, 255, 255, 0.18) 32%,
-      transparent 72%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.18),
-      rgba(255, 255, 255, 0.04)
-    );
-  border-radius: 48px;
-  filter: blur(48px);
-  transform: translateX(-50%);
-  transition: opacity 960ms, transform 960ms;
-  will-change: opacity, transform;
-}
-
-.neta-futurx-services.visible::after {
-  opacity: 0.72;
-  transform: translateX(-50%) scale(1.04);
 }
 
 .neta-futurx-services .work-list_component {
@@ -134,15 +101,15 @@
 }
 
 .neta-futurx-services .hero_card-wrapper {
-  grid-column-gap: 48px;
-  grid-row-gap: 48px;
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
   flex-flow: column;
   justify-content: flex-start;
   align-items: center;
   display: flex;
   position: relative;
-  margin-top: clamp(42px, 6vw, 76px);
-  padding-bottom: 1rem;
+  margin-top: clamp(24px, 3.2vw, 44px);
+  padding-bottom: 7rem;
   top: 0;
 }
 
@@ -181,63 +148,64 @@
 
 .neta-futurx-services .stacking-card {
   background:
-    linear-gradient(155deg, rgba(10, 18, 40, 0.82), rgba(24, 36, 78, 0.72)),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.04));
+    linear-gradient(155deg, rgba(11, 19, 41, 0.94), rgba(18, 31, 64, 0.92)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.03));
   border: 1px solid var(--glass-border);
   border-radius: 32px;
-  -webkit-backdrop-filter: blur(24px) saturate(160%);
-  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(135%);
+  backdrop-filter: blur(14px) saturate(135%);
   justify-content: center;
   align-items: flex-start;
-  width: min(92vw, 1120px);
-  min-height: clamp(420px, 62vh, 720px);
-  height: clamp(420px, 62vh, 720px);
+  width: min(68vw, 920px);
+  min-height: clamp(560px, 72vh, 780px);
+  height: clamp(560px, 72vh, 780px);
   display: flex;
   position: sticky;
   overflow: hidden;
   box-shadow: var(--glass-shadow), var(--glass-highlight);
-  will-change: transform, filter;
+  transform-origin: 50% 14%;
+  will-change: transform;
 }
 
 .neta-futurx-services .stacking-card.is--first {
   pointer-events: auto;
   cursor: pointer;
   background:
-    linear-gradient(155deg, rgba(25, 40, 88, 0.68), rgba(56, 88, 170, 0.3)),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.36), rgba(255, 255, 255, 0.08));
-  border-color: rgba(138, 168, 255, 0.28);
-  margin-bottom: 2.5rem;
-  top: 6.25rem;
+    linear-gradient(155deg, rgba(24, 42, 97, 0.96), rgba(30, 54, 122, 0.94)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.02));
+  border-color: rgba(121, 150, 235, 0.24);
+  margin-bottom: 1rem;
+  top: 4.5rem;
 }
 
 .neta-futurx-services .stacking-card.is--second {
   cursor: pointer;
   background:
-    linear-gradient(160deg, rgba(7, 14, 32, 0.78), rgba(27, 42, 92, 0.74)),
+    linear-gradient(160deg, rgba(10, 18, 38, 0.95), rgba(18, 32, 67, 0.92)),
     linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.03));
-  border-color: rgba(110, 136, 214, 0.18);
-  margin-bottom: 2rem;
-  top: 7rem;
+  border-color: rgba(96, 118, 182, 0.18);
+  margin-bottom: 1rem;
+  top: 6rem;
 }
 
 .neta-futurx-services .stacking-card.is--third {
   cursor: pointer;
   background:
-    linear-gradient(160deg, rgba(8, 15, 35, 0.82), rgba(18, 27, 58, 0.8)),
+    linear-gradient(160deg, rgba(9, 15, 32, 0.96), rgba(16, 27, 56, 0.93)),
     linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03));
-  border-color: rgba(92, 112, 174, 0.18);
-  margin-bottom: 1.5rem;
-  top: 7.75rem;
+  border-color: rgba(78, 95, 152, 0.18);
+  margin-bottom: 1rem;
+  top: 7.5rem;
 }
 
 .neta-futurx-services .stacking-card.is--fourth {
   cursor: pointer;
   background:
-    linear-gradient(160deg, rgba(9, 16, 33, 0.8), rgba(16, 24, 49, 0.84)),
+    linear-gradient(160deg, rgba(8, 13, 27, 0.97), rgba(12, 21, 42, 0.95)),
     linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.02));
-  border-color: rgba(80, 99, 156, 0.18);
-  margin-bottom: 0.75rem;
-  top: 8.5rem;
+  border-color: rgba(65, 79, 125, 0.17);
+  margin-bottom: 0;
+  top: 9rem;
 }
 
 .neta-futurx-services .link-block {
@@ -254,7 +222,9 @@
   .neta-futurx-services .stacking-card.is--second,
   .neta-futurx-services .stacking-card.is--third,
   .neta-futurx-services .stacking-card.is--fourth {
-    width: 90vw;
+    width: min(64vw, 940px);
+    min-height: clamp(580px, 72vh, 800px);
+    height: clamp(580px, 72vh, 800px);
   }
 }
 
@@ -263,9 +233,13 @@
   .neta-futurx-services .stacking-card.is--second,
   .neta-futurx-services .stacking-card.is--third,
   .neta-futurx-services .stacking-card.is--fourth {
-    width: 85vw;
+    width: min(82vw, 920px);
     min-height: 62vh;
     height: 62vh;
+  }
+
+  .neta-futurx-services .hero_card-wrapper {
+    padding-bottom: 5rem;
   }
 }
 
@@ -278,23 +252,24 @@
 
   .neta-futurx-services .hero_card-wrapper {
     grid-row-gap: 36px;
-    margin-top: 44px;
+    margin-top: 36px;
+    padding-bottom: 4rem;
   }
 
   .neta-futurx-services .stacking-card.is--first {
-    top: 5.25rem;
+    top: 4rem;
   }
 
   .neta-futurx-services .stacking-card.is--second {
-    top: 5.9rem;
+    top: 4.9rem;
   }
 
   .neta-futurx-services .stacking-card.is--third {
-    top: 6.55rem;
+    top: 5.8rem;
   }
 
   .neta-futurx-services .stacking-card.is--fourth {
-    top: 7.2rem;
+    top: 6.7rem;
   }
 }
 
@@ -312,6 +287,7 @@
 
   .neta-futurx-services .hero_card-wrapper {
     margin-top: 36px;
+    padding-bottom: 4rem;
   }
 
   .neta-futurx-services .card-left {
@@ -324,15 +300,15 @@
   .neta-futurx-services .stacking-card.is--third {
     flex-flow: column;
     width: 92vw;
-    min-height: 68vh;
-    height: 68vh;
+    min-height: 64vh;
+    height: 64vh;
   }
 
   .neta-futurx-services .stacking-card.is--fourth {
     flex-flow: column;
     width: 92vw;
-    min-height: 68vh;
-    height: 68vh;
+    min-height: 64vh;
+    height: 64vh;
   }
 
   .neta-futurx-services .heading-style-h3.text-color-primary {

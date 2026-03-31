@@ -76,7 +76,7 @@
   color: var(--seric-text);
   width: 100%;
   max-width: 980px;
-  margin: 20px auto 34px;
+  margin: 0 auto 34px;
   text-align: center;
   text-wrap: balance;
   text-transform: none;
@@ -244,7 +244,7 @@
 }
 
 .neta-seric-about .about-counter-flex.about-right .number-wrap {
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .neta-seric-about .number {
@@ -265,7 +265,24 @@
 }
 
 .neta-seric-about .counter-title.ash {
-  color: var(--seric-soft);
+  color: rgba(18, 18, 18, 0.38);
+  font-size: calc(var(--seric-h1) * 0.56);
+  line-height: 1;
+  margin-top: 0.16em;
+  margin-left: 0.04em;
+  align-self: flex-start;
+  display: block;
+  position: relative;
+  flex: none;
+  white-space: nowrap;
+}
+
+.neta-seric-about .number-wrap.number-wrap--plus {
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.04em;
+  overflow: visible;
+  padding-right: 0.08em;
 }
 
 .neta-seric-about .about-counter-para {
@@ -329,6 +346,7 @@
   }
 
   .neta-seric-about .about-title {
+    margin-top: 0;
     margin-bottom: 30px;
   }
 
@@ -370,12 +388,8 @@
     margin-bottom: 40px;
   }
 
-  .neta-seric-about .about-icon {
-    width: 56px;
-  }
-
   .neta-seric-about .about-title {
-    margin-top: 16px;
+    margin-top: 0;
     margin-bottom: 24px;
   }
 

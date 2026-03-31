@@ -18,9 +18,16 @@
   if (window.gsap && window.ScrollTrigger) {
     window.gsap.registerPlugin(window.ScrollTrigger);
 
+    cards.forEach((card) => {
+      window.gsap.set(card, {
+        force3D: true,
+        transformPerspective: 1000,
+      });
+    });
+
     window.ScrollTrigger.create({
       trigger: section,
-      start: "top 72%",
+      start: "top 76%",
       onEnter: activate,
       onEnterBack: activate,
       onLeaveBack: deactivate,
@@ -37,7 +44,8 @@
           ease: "power3.out",
           scrollTrigger: {
             trigger: section,
-            start: "top 74%",
+            start: "top 78%",
+            toggleActions: "play none none reverse",
           },
         }
       );
@@ -50,12 +58,14 @@
       if (image) {
         window.gsap.to(image, {
           scale: 1,
+          yPercent: -2,
           ease: "none",
           scrollTrigger: {
             trigger: card,
             start: "top bottom",
-            end: "top 15%",
-            scrub: 0.8,
+            end: "top 18%",
+            scrub: 1,
+            invalidateOnRefresh: true,
           },
         });
       }
@@ -65,15 +75,15 @@
       }
 
       window.gsap.to(card, {
-        scale: 0.965 - index * 0.015,
-        y: -18 - index * 8,
-        filter: "blur(0.6px)",
+        scale: 0.972 - index * 0.012,
+        y: -24 - index * 10,
         ease: "none",
         scrollTrigger: {
           trigger: nextCard,
-          start: "top 82%",
-          end: "top 28%",
-          scrub: 0.9,
+          start: "top 86%",
+          end: "top 34%",
+          scrub: 1.15,
+          invalidateOnRefresh: true,
         },
       });
     });
