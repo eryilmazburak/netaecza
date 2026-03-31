@@ -57,6 +57,17 @@
   text-decoration: none;
 }
 
+.neta-colby-scope-cta .wrapper-title-cta,
+.neta-colby-scope-cta .wrapper-title-cta.home-2 {
+  padding-bottom: calc(var(--gap--gap-very-small) + 0.12em) !important;
+}
+
+.neta-colby-scope-cta .big-text.cta.text-center {
+  line-height: 1.08 !important;
+  padding-bottom: 0.08em;
+  overflow: visible;
+}
+
 .neta-colby-scope .block-rotate-cta.home-2.v1 {
   background-image: url("../images/cta-orbit-1.png?v=20260331-cta4") !important;
   background-position: 50%;
