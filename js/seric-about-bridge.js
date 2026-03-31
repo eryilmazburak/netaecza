@@ -6,16 +6,15 @@
 
   const reveals = Array.from(section.querySelectorAll(".seric-reveal"));
   const rollers = Array.from(section.querySelectorAll("[data-seric-roll='true']"));
-  const icon = section.querySelector(".about-icon");
-  let replayTimeout = null;
+  let replayFrame = null;
   let isActive = false;
 
-  const clearReplayTimeout = () => {
-    if (!replayTimeout) {
+  const clearReplayFrame = () => {
+    if (replayFrame === null) {
       return;
     }
-    window.clearTimeout(replayTimeout);
-    replayTimeout = null;
+    window.cancelAnimationFrame(replayFrame);
+    replayFrame = null;
   };
 
   const setDelay = (element) => {
@@ -48,32 +47,26 @@
   const applyReset = () => {
     resetReveals();
     resetRollers();
-    if (icon) {
-      icon.classList.remove("is-spinning");
-    }
   };
 
   const resetSection = () => {
-    if (!isActive && !replayTimeout) {
+    if (!isActive && replayFrame === null) {
       return;
     }
     isActive = false;
-    clearReplayTimeout();
+    clearReplayFrame();
     applyReset();
   };
 
   const playSection = () => {
-    if (isActive || replayTimeout) {
+    if (isActive || replayFrame !== null) {
       return;
     }
     applyReset();
 
-    replayTimeout = window.setTimeout(() => {
-      replayTimeout = null;
+    replayFrame = window.requestAnimationFrame(() => {
+      replayFrame = null;
       isActive = true;
-      if (icon) {
-        icon.classList.add("is-spinning");
-      }
 
       reveals.forEach((element) => {
         setDelay(element);
@@ -84,7 +77,7 @@
       rollers.forEach((roller) => {
         roller.classList.add("is-started");
       });
-    }, 60);
+    });
   };
 
   applyReset();
@@ -94,8 +87,8 @@
 
     window.ScrollTrigger.create({
       trigger: section,
-      start: "top 80%",
-      end: "bottom -10%",
+      start: "top 78%",
+      end: "bottom 12%",
       onEnter: playSection,
       onEnterBack: playSection,
       onLeave: resetSection,

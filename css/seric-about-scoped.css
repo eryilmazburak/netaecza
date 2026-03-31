@@ -18,8 +18,8 @@
   --seric-text-sm: 16px;
   --seric-text-sm-line: 150%;
   --seric-text-sm-tracking: -0.5px;
-  --seric-about-title-size: 76px;
-  --seric-about-title-line: 112%;
+  --seric-about-title-size: 68px;
+  --seric-about-title-line: 118%;
   --seric-counter-height: 100.797px;
   background-color: transparent;
   color: var(--seric-text);
@@ -64,24 +64,26 @@
   width: 65px;
   display: block;
   transform-origin: 50% 50%;
+  transform: none !important;
+  animation: none !important;
 }
 
 .neta-seric-about .about-icon.is-spinning {
-  animation: neta-seric-spin 10s linear infinite;
+  animation: none !important;
 }
 
 .neta-seric-about .about-title {
   color: var(--seric-text);
   width: 100%;
-  max-width: 1020px;
+  max-width: 980px;
   margin: 20px auto 34px;
   text-align: center;
   text-wrap: balance;
-  text-transform: uppercase;
+  text-transform: none;
   font-size: var(--seric-about-title-size);
   line-height: var(--seric-about-title-line);
   font-weight: 600;
-  letter-spacing: 0.4px;
+  letter-spacing: -0.03em;
 }
 
 .neta-seric-about .about-para {
@@ -198,7 +200,8 @@
 }
 
 .neta-seric-about .about-counter {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   justify-content: space-between;
   align-items: flex-start;
   gap: 28px;
@@ -207,31 +210,31 @@
 }
 
 .neta-seric-about .about-counter-flex {
-  display: flex;
-  flex: 1 1 0;
-  flex-flow: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  display: grid;
+  grid-template-rows: minmax(var(--seric-counter-height), auto) auto;
+  justify-items: center;
+  align-content: start;
   gap: 34px;
   overflow: clip;
   min-width: 0;
 }
 
 .neta-seric-about .about-counter-flex.center {
-  align-items: center;
+  justify-items: center;
   text-align: center;
 }
 
 .neta-seric-about .about-counter-flex.about-right {
-  align-items: flex-end;
-  text-align: right;
+  justify-items: center;
+  text-align: center;
 }
 
 .neta-seric-about .number-wrap {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   gap: 0;
+  width: 100%;
   min-height: var(--seric-counter-height);
   overflow: clip;
 }
@@ -257,6 +260,7 @@
   line-height: var(--seric-h1-line);
   font-weight: 600;
   letter-spacing: var(--seric-h1-tracking);
+  font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
 
@@ -272,6 +276,7 @@
   max-width: 18ch;
   text-wrap: balance;
   margin: 0;
+  text-align: center;
 }
 
 .neta-seric-about [data-seric-roll="true"] .number {
@@ -313,23 +318,13 @@
   overflow: visible;
 }
 
-@keyframes neta-seric-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 @media screen and (max-width: 991px) {
   .neta-seric-about {
     --seric-h1: 54px;
     --seric-h3: 40px;
     --seric-h5: 24px;
     --seric-text-md: 16px;
-    --seric-about-title-size: 60px;
+    --seric-about-title-size: 52px;
     --seric-counter-height: 64.7969px;
   }
 
@@ -361,7 +356,7 @@
     --seric-h3: 28px;
     --seric-h5: 21px;
     --seric-text-md: 16px;
-    --seric-about-title-size: 32px;
+    --seric-about-title-size: 29px;
     --seric-about-title-line: 116%;
     --seric-counter-height: 43.2031px;
   }
@@ -396,9 +391,9 @@
   .neta-seric-about .about-counter-flex,
   .neta-seric-about .about-counter-flex.center,
   .neta-seric-about .about-counter-flex.about-right {
-    align-items: center;
+    justify-items: center;
     text-align: center;
-    width: auto;
+    width: 100%;
     gap: 14px;
   }
 
