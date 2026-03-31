@@ -32,6 +32,14 @@
   line-height: 0.96;
 }
 
+.footer_brand {
+  color: #253770;
+  white-space: nowrap;
+  text-wrap: nowrap;
+  font-size: clamp(5.5rem, 16vw, 15rem);
+  line-height: 0.92;
+}
+
 @media screen and (max-width: 767px) {
   .section_home-about .home-about_component {
     padding: 0.75rem;
@@ -52,5 +60,10 @@
   .section_home-about .home-about_img-text {
     max-width: 10ch;
     line-height: 1;
+  }
+
+  .footer_brand {
+    font-size: clamp(4.25rem, 20vw, 7rem);
+    line-height: 0.94;
   }
 }

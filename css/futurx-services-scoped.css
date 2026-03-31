@@ -175,8 +175,11 @@
 .neta-futurx-services .stacking-card.is--first {
   pointer-events: auto;
   cursor: pointer;
-  background: #253771;
-  border-color: rgba(77, 102, 180, 0.34);
+  background: #253770;
+  border-color: rgba(37, 55, 112, 0.28);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  box-shadow: 0 26px 58px rgba(19, 33, 71, 0.14);
   margin-bottom: 0;
   top: 4.2rem;
 }
