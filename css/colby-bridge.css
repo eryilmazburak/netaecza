@@ -57,6 +57,49 @@
   text-decoration: none;
 }
 
+.neta-colby-scope-cta .block-title-cta .wrapper-title-cta {
+  min-height: 1.08em;
+  padding-bottom: 0.12em;
+}
+
+.neta-colby-scope-cta .big-text.cta.text-center.v1 {
+  line-height: 1.04;
+  padding-bottom: 0.06em;
+}
+
+.neta-colby-scope-cta .block-link-cta {
+  width: 100%;
+  min-height: clamp(4.5rem, 7vw, 6.25rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.neta-colby-scope-cta .block-link-cta > .wrapper-title-cta.home-2 {
+  width: auto !important;
+  min-height: 1.08em;
+  margin-top: 0 !important;
+  padding-bottom: 0.14em;
+  display: inline-flex !important;
+  flex-flow: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 0.4em;
+}
+
+.neta-colby-scope-cta .big-text.cta.text-center.v2 {
+  line-height: 1.04;
+  white-space: nowrap;
+  padding-bottom: 0.08em;
+}
+
+.neta-colby-scope-cta .icon-cta.home-2.tab {
+  margin-bottom: 0 !important;
+  flex: 0 0 auto;
+  position: static;
+}
+
 .neta-colby-scope .block-rotate-cta.home-2.v1 {
   background-image: url("../images/cta-orbit-1.png?v=20260331-cta4") !important;
   background-position: 50%;
@@ -360,6 +403,19 @@
 
   .neta-colby-scope .block-text-portofolio .big-text.home-2.text-center {
     font-size: clamp(1.45rem, 6.6vw, 2rem) !important;
+  }
+
+  .neta-colby-scope-cta .block-link-cta {
+    min-height: 3.9rem;
+  }
+
+  .neta-colby-scope-cta .block-link-cta > .wrapper-title-cta.home-2 {
+    gap: 0.28rem;
+  }
+
+  .neta-colby-scope-cta .big-text.cta.text-center.v2 {
+    font-size: clamp(2rem, 10.5vw, 2.75rem) !important;
+    line-height: 1.02;
   }
 
 }
