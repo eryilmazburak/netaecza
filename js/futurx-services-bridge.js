@@ -23,6 +23,12 @@
         force3D: true,
         transformPerspective: 1000,
       });
+      const image = card.querySelector(".img-card");
+      if (image) {
+        window.gsap.set(image, {
+          force3D: true,
+        });
+      }
     });
 
     window.ScrollTrigger.create({
@@ -58,13 +64,12 @@
       if (image) {
         window.gsap.to(image, {
           scale: 1,
-          yPercent: -2,
           ease: "none",
           scrollTrigger: {
             trigger: card,
             start: "top bottom",
-            end: "top 18%",
-            scrub: 1,
+            end: "top 24%",
+            scrub: 0.55,
             invalidateOnRefresh: true,
           },
         });
@@ -75,14 +80,14 @@
       }
 
       window.gsap.to(card, {
-        scale: 0.972 - index * 0.012,
-        y: -24 - index * 10,
+        scale: 0.978 - index * 0.01,
+        y: -14 - index * 8,
         ease: "none",
         scrollTrigger: {
           trigger: nextCard,
-          start: "top 86%",
-          end: "top 34%",
-          scrub: 1.15,
+          start: "top 88%",
+          end: "top 40%",
+          scrub: 0.65,
           invalidateOnRefresh: true,
         },
       });

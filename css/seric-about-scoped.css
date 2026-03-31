@@ -234,7 +234,7 @@
   justify-content: center;
   align-items: center;
   gap: 0;
-  width: 100%;
+  width: auto;
   min-height: var(--seric-counter-height);
   overflow: clip;
 }
@@ -268,21 +268,23 @@
   color: rgba(18, 18, 18, 0.38);
   font-size: calc(var(--seric-h1) * 0.56);
   line-height: 1;
-  margin-top: 0.16em;
-  margin-left: 0.04em;
-  align-self: flex-start;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-42%);
   display: block;
-  position: relative;
   flex: none;
   white-space: nowrap;
 }
 
 .neta-seric-about .number-wrap.number-wrap--plus {
-  align-items: flex-start;
+  position: relative;
+  align-items: center;
   justify-content: center;
-  gap: 0.04em;
-  overflow: visible;
-  padding-right: 0.08em;
+  gap: 0;
+  overflow: clip;
+  padding-right: 0.38em;
 }
 
 .neta-seric-about .about-counter-para {

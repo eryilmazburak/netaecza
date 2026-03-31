@@ -57,6 +57,62 @@
   text-decoration: none;
 }
 
+.neta-colby-scope .block-rotate-cta.home-2.v1 {
+  background-image: url("../images/cta-orbit-1.png") !important;
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.neta-colby-scope .block-rotate-cta.home-2.v2 {
+  background-image: url("../images/cta-orbit-2.png") !important;
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.neta-colby-scope .block-rotate-cta.home-2.v3 {
+  background-image: url("../images/cta-orbit-3.png") !important;
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.neta-colby-scope .block-rotate-cta.home-2.v4 {
+  background-image: url("../images/cta-orbit-4.png") !important;
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.neta-colby-scope .block-rotate-cta.home-2.v5 {
+  background-image: url("../images/cta-orbit-5.png") !important;
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.neta-colby-scope .block-rotate-cta.home-2.v6 {
+  background-image: url("../images/cta-orbit-6.png") !important;
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.neta-colby-scope .block-rotate-cta.home-2.v7 {
+  background-image: url("../images/cta-orbit-7.png") !important;
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.neta-colby-scope .block-rotate-cta.home-2.v8 {
+  background-image: url("../images/cta-orbit-8.png") !important;
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .neta-colby-scope,
 .neta-colby-scope .tracks.home-2.service,
 .neta-colby-scope .tracks.home-2.cta,
