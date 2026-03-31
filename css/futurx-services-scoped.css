@@ -1,0 +1,361 @@
+.neta-futurx-services {
+  --color: #303a75;
+  --rgb: 40, 87, 255;
+  margin-top: -164px;
+  margin-bottom: 60px;
+  padding-top: 300px;
+  position: relative;
+  z-index: 1;
+  overflow: clip;
+}
+
+.neta-futurx-services::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0;
+  background: radial-gradient(
+    ellipse 100% 40% at 50% 60%,
+    rgba(var(--rgb), 0.1),
+    transparent
+  );
+  transition: opacity 960ms;
+  will-change: opacity;
+}
+
+.neta-futurx-services.visible::after {
+  opacity: 0.8;
+}
+
+.neta-futurx-services .page-padding {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.neta-futurx-services .container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.neta-futurx-services .container.page-padding {
+  max-width: none;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.neta-futurx-services .light-bar {
+  pointer-events: none;
+  user-select: none;
+  --first: conic-gradient(from 90deg at 80% 50%, #000212, var(--color));
+  --second: conic-gradient(from 270deg at 20% 50%, var(--color), #000212);
+  opacity: 0.4;
+  width: 100%;
+  height: 400px;
+  margin-bottom: -400px;
+  -webkit-mask-image: radial-gradient(
+    100% 50% at center center,
+    black,
+    transparent
+  );
+  mask-image: radial-gradient(100% 50% at center center, black, transparent);
+  background: var(--first), var(--second);
+  background-position: 0 0, 100% 0;
+  background-size: 50% 100%, 50% 100%;
+  background-repeat: no-repeat;
+  transform: translateY(-200px) rotate(180deg) translateZ(0);
+  transition: transform 0.96s, opacity 0.96s;
+}
+
+.neta-futurx-services.visible .light-bar {
+  opacity: 1;
+  transform: translateY(-200px) rotate(180deg) scale(2) translateZ(0);
+}
+
+.neta-futurx-services .feature-section-header {
+  text-align: center;
+  margin-top: -128px;
+  margin-bottom: -128px;
+  padding-top: 128px;
+  padding-bottom: 128px;
+  position: relative;
+}
+
+.neta-futurx-services .feature-heading {
+  letter-spacing: -0.04em;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: radial-gradient(
+    40% 70% at 50% 100%,
+    rgba(37, 55, 113, 0.45),
+    rgb(17, 17, 17)
+  );
+  margin-bottom: 16px;
+  padding: 0.13em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 0.9;
+  transition: transform 0.96s cubic-bezier(0.3, 1.17, 0.55, 0.99);
+}
+
+.neta-futurx-services.visible .feature-heading {
+  transform: translateY(-40%);
+}
+
+.neta-futurx-services .feature-subheading {
+  color: #111111;
+  text-align: center;
+  letter-spacing: -0.04em;
+  max-width: 100vw;
+  margin: 64px 0 20px;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.2;
+  position: relative;
+  text-wrap: balance;
+}
+
+.neta-futurx-services .card_content-wrap {
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  flex-flow: column;
+  align-items: flex-start;
+  display: flex;
+}
+
+.neta-futurx-services .text-size-tiny {
+  font-size: 0.75rem;
+}
+
+.neta-futurx-services .text-size-tiny.text-color-secondary {
+  color: #45abc8;
+}
+
+.neta-futurx-services .text-size-regular {
+  font-size: 1rem;
+}
+
+.neta-futurx-services .text-size-regular.text-color-primary {
+  color: #bcbcbc;
+  text-align: left;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.neta-futurx-services .heading-style-h3.text-color-primary {
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.neta-futurx-services .card-right {
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  padding: 30px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  display: flex;
+}
+
+.neta-futurx-services .hero_card-wrapper {
+  grid-column-gap: 100px;
+  grid-row-gap: 100px;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  position: relative;
+  top: 10rem;
+}
+
+.neta-futurx-services .card-left {
+  width: 50%;
+  height: 100%;
+}
+
+.neta-futurx-services .img-card {
+  aspect-ratio: auto;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.neta-futurx-services .stacking-card {
+  background-color: #010102;
+  border: 1px solid #454b02;
+  border-radius: 18px;
+  justify-content: center;
+  align-items: flex-start;
+  width: 850px;
+  height: 341px;
+  display: flex;
+  position: sticky;
+  overflow: hidden;
+  box-shadow: 0 -8px 20px 1px #fff3;
+}
+
+.neta-futurx-services .stacking-card.is--first {
+  box-shadow: none;
+  pointer-events: auto;
+  cursor: pointer;
+  background-color: #00021200;
+  border: 1.4px solid #ffffff29;
+  width: 80vw;
+  height: 70vh;
+  margin-bottom: 5rem;
+  top: 10rem;
+}
+
+.neta-futurx-services .stacking-card.is--second {
+  box-shadow: none;
+  cursor: pointer;
+  background-color: #000212;
+  border: 1.4px solid #ffffff29;
+  width: 80vw;
+  height: 70vh;
+  margin-bottom: 4rem;
+  top: 11rem;
+}
+
+.neta-futurx-services .stacking-card.is--third {
+  box-shadow: none;
+  cursor: pointer;
+  background-color: #000212;
+  border: 1.4px solid #ffffff29;
+  width: 80vw;
+  height: 70vh;
+  margin-bottom: 3rem;
+  top: 12rem;
+}
+
+.neta-futurx-services .stacking-card.is--fourth {
+  box-shadow: none;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  cursor: pointer;
+  background-color: #000212;
+  border: 1.4px solid #ffffff29;
+  width: 80vw;
+  height: 70vh;
+  margin-bottom: 2rem;
+  top: 13rem;
+}
+
+.neta-futurx-services .link-block {
+  position: absolute;
+  inset: 0;
+}
+
+@media screen and (min-width: 1440px) {
+  .neta-futurx-services .container.page-padding {
+    max-width: none;
+  }
+
+  .neta-futurx-services .stacking-card.is--first,
+  .neta-futurx-services .stacking-card.is--second,
+  .neta-futurx-services .stacking-card.is--third,
+  .neta-futurx-services .stacking-card.is--fourth {
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .neta-futurx-services .stacking-card.is--first,
+  .neta-futurx-services .stacking-card.is--second,
+  .neta-futurx-services .stacking-card.is--third,
+  .neta-futurx-services .stacking-card.is--fourth {
+    width: 85vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .neta-futurx-services {
+    padding-top: 300px;
+  }
+
+  .neta-futurx-services .page-padding {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .neta-futurx-services .feature-heading {
+    font-size: 52px;
+  }
+
+  .neta-futurx-services .feature-subheading {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .neta-futurx-services .container.page-padding {
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 0;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .neta-futurx-services .text-size-regular.text-color-primary {
+    font-size: 0.8rem;
+    line-height: 1.2em;
+  }
+
+  .neta-futurx-services .card-right {
+    width: 100%;
+    height: 50%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .neta-futurx-services .hero_card-wrapper {
+    margin-top: -12%;
+  }
+
+  .neta-futurx-services .card-left {
+    width: 100%;
+    height: 50%;
+  }
+
+  .neta-futurx-services .stacking-card.is--first,
+  .neta-futurx-services .stacking-card.is--second,
+  .neta-futurx-services .stacking-card.is--third {
+    box-shadow: none;
+    background-color: #010313;
+    border-color: #ffffff29;
+    flex-flow: column;
+    width: 90vw;
+    height: 70vh;
+  }
+
+  .neta-futurx-services .stacking-card.is--fourth {
+    box-shadow: none;
+    background-color: #010313;
+    border-width: 1.4px;
+    border-color: #ffffff29;
+    flex-flow: column;
+    width: 90vw;
+    height: 70vh;
+  }
+}
