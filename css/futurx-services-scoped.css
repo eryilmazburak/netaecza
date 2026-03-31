@@ -4,7 +4,7 @@
   --glass-shadow: 0 20px 52px rgba(9, 14, 28, 0.1);
   --glass-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.26);
   margin-top: 0;
-  margin-bottom: 96px;
+  margin-bottom: 56px;
   padding-top: 0;
   position: relative;
   z-index: 1;
@@ -108,8 +108,8 @@
   align-items: center;
   display: flex;
   position: relative;
-  margin-top: clamp(18px, 2.8vw, 34px);
-  padding-bottom: clamp(9rem, 16vh, 12rem);
+  margin-top: clamp(18px, 2.4vw, 28px);
+  padding-bottom: clamp(3rem, 7vh, 4.75rem);
   top: 0;
 }
 
@@ -159,9 +159,9 @@
   backdrop-filter: blur(14px) saturate(135%);
   justify-content: center;
   align-items: flex-start;
-  width: min(64vw, 860px);
-  min-height: clamp(600px, 74vh, 820px);
-  height: clamp(600px, 74vh, 820px);
+  width: min(72vw, 1060px);
+  min-height: clamp(620px, 76vh, 860px);
+  height: clamp(620px, 76vh, 860px);
   display: flex;
   position: sticky;
   overflow: hidden;
@@ -175,12 +175,10 @@
 .neta-futurx-services .stacking-card.is--first {
   pointer-events: auto;
   cursor: pointer;
-  background:
-    linear-gradient(155deg, rgba(24, 42, 97, 0.96), rgba(30, 54, 122, 0.94)),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.02));
-  border-color: rgba(121, 150, 235, 0.24);
+  background: #253771;
+  border-color: rgba(77, 102, 180, 0.34);
   margin-bottom: 0;
-  top: 3.8rem;
+  top: 4.2rem;
 }
 
 .neta-futurx-services .stacking-card.is--second {
@@ -190,7 +188,7 @@
     linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.03));
   border-color: rgba(96, 118, 182, 0.18);
   margin-bottom: 0;
-  top: 4.95rem;
+  top: 5.35rem;
 }
 
 .neta-futurx-services .stacking-card.is--third {
@@ -200,7 +198,7 @@
     linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03));
   border-color: rgba(78, 95, 152, 0.18);
   margin-bottom: 0;
-  top: 6.1rem;
+  top: 6.5rem;
 }
 
 .neta-futurx-services .stacking-card.is--fourth {
@@ -210,7 +208,7 @@
     linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.02));
   border-color: rgba(65, 79, 125, 0.17);
   margin-bottom: 0;
-  top: 7.25rem;
+  top: 7.65rem;
 }
 
 .neta-futurx-services .link-block {
@@ -227,9 +225,9 @@
   .neta-futurx-services .stacking-card.is--second,
   .neta-futurx-services .stacking-card.is--third,
   .neta-futurx-services .stacking-card.is--fourth {
-    width: min(60vw, 860px);
-    min-height: clamp(620px, 76vh, 840px);
-    height: clamp(620px, 76vh, 840px);
+    width: min(70vw, 1120px);
+    min-height: clamp(640px, 78vh, 900px);
+    height: clamp(640px, 78vh, 900px);
   }
 }
 
@@ -238,13 +236,13 @@
   .neta-futurx-services .stacking-card.is--second,
   .neta-futurx-services .stacking-card.is--third,
   .neta-futurx-services .stacking-card.is--fourth {
-    width: min(82vw, 920px);
-    min-height: 62vh;
-    height: 62vh;
+    width: min(86vw, 980px);
+    min-height: 66vh;
+    height: 66vh;
   }
 
   .neta-futurx-services .hero_card-wrapper {
-    padding-bottom: 4.5rem;
+    padding-bottom: 3rem;
   }
 }
 
@@ -258,23 +256,23 @@
   .neta-futurx-services .hero_card-wrapper {
     grid-row-gap: 0;
     margin-top: 28px;
-    padding-bottom: 3.25rem;
+    padding-bottom: 2.2rem;
   }
 
   .neta-futurx-services .stacking-card.is--first {
-    top: 3.55rem;
+    top: 3.2rem;
   }
 
   .neta-futurx-services .stacking-card.is--second {
-    top: 4.25rem;
+    top: 3.95rem;
   }
 
   .neta-futurx-services .stacking-card.is--third {
-    top: 4.95rem;
+    top: 4.7rem;
   }
 
   .neta-futurx-services .stacking-card.is--fourth {
-    top: 5.65rem;
+    top: 5.45rem;
   }
 }
 
@@ -291,8 +289,8 @@
   }
 
   .neta-futurx-services .hero_card-wrapper {
-    margin-top: 36px;
-    padding-bottom: 3rem;
+    margin-top: 28px;
+    padding-bottom: 1.75rem;
   }
 
   .neta-futurx-services .card-left {
@@ -305,15 +303,15 @@
   .neta-futurx-services .stacking-card.is--third {
     flex-flow: column;
     width: 92vw;
-    min-height: 62vh;
-    height: 62vh;
+    min-height: 68vh;
+    height: 68vh;
   }
 
   .neta-futurx-services .stacking-card.is--fourth {
     flex-flow: column;
     width: 92vw;
-    min-height: 62vh;
-    height: 62vh;
+    min-height: 68vh;
+    height: 68vh;
   }
 
   .neta-futurx-services .heading-style-h3.text-color-primary {

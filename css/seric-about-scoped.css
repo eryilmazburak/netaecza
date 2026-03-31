@@ -262,29 +262,41 @@
   letter-spacing: var(--seric-h1-tracking);
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
+  height: var(--seric-counter-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .neta-seric-about .counter-title.ash {
   color: rgba(18, 18, 18, 0.38);
   font-size: calc(var(--seric-h1) * 0.56);
   line-height: 1;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-42%);
+  margin-top: 0.1em;
+  margin-left: 0;
+  position: static;
+  transform: none;
   display: block;
+  height: auto;
   flex: none;
   white-space: nowrap;
 }
 
 .neta-seric-about .number-wrap.number-wrap--plus {
-  position: relative;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  gap: 0.06em;
+  width: fit-content;
+  overflow: visible;
+  padding-right: 0;
+}
+
+.neta-seric-about .number-roll-group {
+  display: flex;
+  align-items: flex-start;
   gap: 0;
+  min-height: var(--seric-counter-height);
   overflow: clip;
-  padding-right: 0.38em;
 }
 
 .neta-seric-about .about-counter-para {

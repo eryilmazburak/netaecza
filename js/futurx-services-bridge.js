@@ -80,14 +80,14 @@
       }
 
       window.gsap.to(card, {
-        scale: 0.978 - index * 0.01,
-        y: -14 - index * 8,
+        scale: 1,
+        y: -12 - index * 6,
         ease: "none",
         scrollTrigger: {
           trigger: nextCard,
-          start: "top 88%",
-          end: "top 40%",
-          scrub: 0.65,
+          start: "top 90%",
+          end: "top 48%",
+          scrub: 0.45,
           invalidateOnRefresh: true,
         },
       });
