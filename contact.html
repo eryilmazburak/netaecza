@@ -49,7 +49,7 @@
 <div class="navbar_link-text _1">Hizmetlerimiz</div>
 <div class="navbar_link-text _2">Hizmetlerimiz</div>
 </a>
-<a href="blog.html" class="navbar_link w-inline-block">
+<a href="operasyon-standardi.html" class="navbar_link w-inline-block">
 <div class="navbar_link-text _1">Operasyon Standardı</div>
 <div class="navbar_link-text _2">Operasyon Standardı</div>
 </a>
@@ -96,7 +96,7 @@
 <div class="spacer-medium">
 </div>
 <div class="contact_form-block w-form">
-<form id="wf-form-contact-form" name="wf-form-contact-form" data-name="Iletisim Formu" method="get" class="contact_form" data-wf-page-id="68508388866449b010dd2661" data-wf-element-id="15e79eb7-124c-56a8-5118-769e8bf59a1d">
+<form id="wf-form-contact-form" name="wf-form-contact-form" data-name="Iletisim Formu" action="contact-submit.php" method="post" accept-charset="UTF-8" class="contact_form" data-wf-page-id="68508388866449b010dd2661" data-wf-element-id="15e79eb7-124c-56a8-5118-769e8bf59a1d">
 <div class="contact_fields">
 <div class="contact_fields-wrap">
 <div class="contact_field-wrap-2">
@@ -123,6 +123,10 @@
 <label for="Message" class="hide">Mesaj</label>
 <textarea id="Message" name="Message" maxlength="5000" data-name="Message" placeholder="Mesaj" required="" class="form_field message w-input">
 </textarea>
+</div>
+<div class="contact_field-wrap-2" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;" aria-hidden="true">
+<label for="website">Website</label>
+<input class="form_field w-input" maxlength="256" name="website" autocomplete="off" tabindex="-1" type="text" id="website"/>
 </div>
 </div>
 <input type="submit" data-wait="Lütfen bekleyin..." class="button-solid w-button" value="Mesaj gönderin"/>
@@ -231,7 +235,7 @@
 <a href="works.html" class="footer_link">Hizmetlerimiz</a>
 </div>
 <div class="footer_links-list">
-<a href="blog.html" class="footer_link">Operasyon Standardı</a>
+<a href="operasyon-standardi.html" class="footer_link">Operasyon Standardı</a>
 <a href="contact.html" class="footer_link">İletişim</a>
 </div>
 </div>
@@ -271,6 +275,8 @@
 <script src="js/splittext.min.js" type="text/javascript">
 </script>
 <script src="js/scrolltrigger.min.js" type="text/javascript">
+</script>
+<script src="js/contact-form-status.js" type="text/javascript">
 </script>
 </body>
 </html>
